@@ -1,6 +1,6 @@
 ## Custom dynamic stormgate triggers
 
-> Written by a user named thanks.
+> Written by a user named thanks. If you want to include these triggers in your own custom map, I would appreciate if you credited me when you publish it for sharing.
 
 Works for:
 - Up to 5 stormgates inclusive (stormgates will not start if you have >5)
