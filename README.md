@@ -21,18 +21,18 @@ However, I have typically removed all references, i.e.:
 - Deleting any catalog/archetypes/Stormgates/CapturePoints/StormgateCP#.json files that are unused (likely optional)
 
 #### Steps
-- Assign placed names of StormgateCP# (where 3 is an integer 1-5) to tug of war objects
+- Assign placed names of StormgateCP# (where # is an integer 1-5) to tug of war objects
   - Tug Of War IDs are typically labelled 0-4 but CP placed names must be 1-5.
-  - This is typically handled inside CapturePoints/StormgateCP#.json
+  - This is handled inside CapturePoints/StormgateCP#.json
 - Assign placed names of StormgateSubmerged# (where # is an integer 1-5) to stormgate objects
   - IDs are typically labelled 0-4 but placed names must be 1-5.
-  - This is typically done inside managed_archetypes.json
+  - This is handled inside managed_archetypes.json
     - An example managed_archetypes.json with nothing but 5 stormgates has been included.
 
 - Place up to 5 instances of StormgateSubmerged# and StormgateCP# on the map
-  - This is in preplaced_named_objects.json
+  - This is in preplaced_named_objects.json and they should be owned by Player 31 (Neutral Hostile).
   - Ensure the position arrays (x, y) match for pairs of capture points and stormgate submerged structures.
-  - An example preplaced_named_objects.json with 5 pairs of objects placed has been included. Feel free to move these around the map or change GUIDs
+  - An example preplaced_named_objects.json with 5 pairs of objects placed has been included. Feel free to move these around the map and/or change GUIDs.
 
 - Copy this folder of Stormgates/ into catalog/archetypes/ so that we have catalog/archetypes/Stormgates/
 - Ensure the "Init_StormgateObjectives" trigger is run as a "Trigger_Run" call in catalog/archetypes/MeleeInitialization.json
