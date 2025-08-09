@@ -1,0 +1,1046 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "CurrentStormgateWaveCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Player"
+                          },
+                          "value": "0"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Trigger_Run",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Trigger"
+                          },
+                          "value": "PrepareStormgateObjectiveLv1_Discoverable"
+                        }
+                      }
+                    ],
+                    "id": "trigger"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_CheckIgnoreConditions",
+                          "value_id": "check"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "conditions"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_WaitDontWait",
+                          "value_id": "nowait"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "wait"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Time_Forever",
+                          "value_id": "forever"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "timeout"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateChargingSingle"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "CurrentStormgateWaveCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Player"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Trigger_Run",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Trigger"
+                          },
+                          "value": "PrepareStormgateObjectiveLv2_Discoverable"
+                        }
+                      }
+                    ],
+                    "id": "trigger"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_CheckIgnoreConditions",
+                          "value_id": "check"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "conditions"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_WaitDontWait",
+                          "value_id": "nowait"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "wait"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Time_Forever",
+                          "value_id": "forever"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "timeout"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateChargingSingle"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "CurrentStormgateWaveCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Player"
+                          },
+                          "value": "2"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Trigger_Run",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Trigger"
+                          },
+                          "value": "PrepareStormgateObjectiveLv3_Discoverable"
+                        }
+                      }
+                    ],
+                    "id": "trigger"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_CheckIgnoreConditions",
+                          "value_id": "check"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "conditions"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_WaitDontWait",
+                          "value_id": "nowait"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "wait"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Time_Forever",
+                          "value_id": "forever"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "timeout"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateChargingSingle"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "CurrentStormgateWaveCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Player"
+                          },
+                          "value": "3"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Trigger_Run",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Trigger"
+                          },
+                          "value": "PrepareStormgateObjectiveLv3_Discoverable"
+                        }
+                      }
+                    ],
+                    "id": "trigger"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_CheckIgnoreConditions",
+                          "value_id": "check"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "conditions"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_WaitDontWait",
+                          "value_id": "nowait"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "wait"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Time_Forever",
+                          "value_id": "forever"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "timeout"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateChargingSingle"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "CurrentStormgateWaveCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "gre"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Player"
+                          },
+                          "value": "4"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Trigger_Run",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Trigger"
+                          },
+                          "value": "PrepareStormgateObjectiveLv3_Discoverable"
+                        }
+                      }
+                    ],
+                    "id": "trigger"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_CheckIgnoreConditions",
+                          "value_id": "check"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "conditions"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Trigger_WaitDontWait",
+                          "value_id": "nowait"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "wait"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Time_Forever",
+                          "value_id": "forever"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "timeout"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateChargingSingle"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "Timer_StartTimer",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateSpawnTimer"
+                }
+              }
+            ],
+            "id": "timer"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Time"
+                  },
+                  "value": "20.0"
+                }
+              }
+            ],
+            "id": "duration"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Timer_RepeatingOption",
+                  "value_id": "oneshot"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "repeating"
+          }
+        ]
+      },
+      {
+        "function_id": "Debug_DebugMessage",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Debug_DebugMessageTag",
+                  "value_id": "notag"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "tag"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "String"
+                  },
+                  "value": "stormgates charging!!!!"
+                }
+              }
+            ],
+            "id": "message"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Time"
+                  },
+                  "value": "30.0"
+                }
+              }
+            ],
+            "id": "duration"
+          }
+        ]
+      },
+      {
+        "function_id": "Variable_ModifyVariable",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "CurrentStormgateWaveCount"
+                }
+              }
+            ],
+            "id": "variable"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Math_ArithmeticOperator",
+                  "value_id": "plus"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "op"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Integer"
+                  },
+                  "value": "1"
+                }
+              }
+            ],
+            "id": "value"
+          }
+        ]
+      },
+      {
+        "function_id": "Variable_SetVariable",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "Team1StormgateContested"
+                }
+              }
+            ],
+            "id": "variable"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Boolean"
+                  },
+                  "value": "false"
+                }
+              }
+            ],
+            "id": "value"
+          }
+        ]
+      },
+      {
+        "function_id": "Variable_SetVariable",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "Team2StormgateContested"
+                }
+              }
+            ],
+            "id": "variable"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Boolean"
+                  },
+                  "value": "false"
+                }
+              }
+            ],
+            "id": "value"
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "events": [
+      {
+        "function_id": "Timer_OnTimerExpired",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgatePrepareTimer"
+                }
+              }
+            ],
+            "id": "timer"
+          }
+        ]
+      }
+    ],
+    "id": "StormgatePrepareTimerExpired_Discoverable"
+  },
+  "meta": {}
+}

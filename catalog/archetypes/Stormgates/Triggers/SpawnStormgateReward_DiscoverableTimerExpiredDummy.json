@@ -1,0 +1,2465 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "General_Switch",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Timer_GetTriggeringTimer"
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "value"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateDiscoverableTimer1"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup1"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup1"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup1"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateDiscoverableTimer2"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup2"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup2"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup2"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateDiscoverableTimer3"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "2"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup3"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup3"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup3"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateDiscoverableTimer4"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "3"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup4"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup4"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup4"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateDiscoverableTimer5"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "4"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup5"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup5"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup5"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              }
+            ],
+            "id": "cases"
+          },
+          {
+            "id": "default"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Entity_HasBuff",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "indices": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "temp_index"
+                                        }
+                                      }
+                                    ],
+                                    "variable_id": "StormgateGroup"
+                                  }
+                                }
+                              ],
+                              "id": "entity"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "TypeRef",
+                                      "implements": "",
+                                      "inner_type": "",
+                                      "param_id": "",
+                                      "sub_directive": "None",
+                                      "type": "Buff"
+                                    },
+                                    "value": "StormgateDiscoverTimerBuff"
+                                  }
+                                }
+                              ],
+                              "id": "buff"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Buff_AnySource",
+                                    "value_id": "none"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ],
+                              "id": "source"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "id": "then"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "General_SkipRemainingActions"
+              }
+            ],
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "Variable_SetVariable",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "trigger_player"
+                }
+              }
+            ],
+            "id": "variable"
+          },
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Unit_GetOwningPlayer",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "type": "Variable",
+                          "variable": {
+                            "indices": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "variable_id": "StormgateGroup"
+                          }
+                        }
+                      ],
+                      "id": "unit"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "value"
+          }
+        ]
+      },
+      {
+        "function_id": "Variable_SetVariable",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "ActiveStormgatePoints"
+                }
+              }
+            ],
+            "id": "variable"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Integer"
+                  },
+                  "value": "0"
+                }
+              }
+            ],
+            "id": "value"
+          }
+        ]
+      },
+      {
+        "function_id": "Ping_Destroy",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "ActiveStormgatePings"
+                }
+              }
+            ],
+            "id": "ping"
+          }
+        ]
+      },
+      {
+        "function_id": "Variable_SetVariable",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "RandomInteger"
+                }
+              }
+            ],
+            "id": "variable"
+          },
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Random_Integer",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "type": "Value",
+                          "value": {
+                            "type": {
+                              "directive": "FunctionType",
+                              "implements": "",
+                              "inner_type": "",
+                              "param_id": "",
+                              "sub_directive": "None",
+                              "type": "Integer"
+                            },
+                            "value": "0"
+                          }
+                        }
+                      ],
+                      "id": "min"
+                    },
+                    {
+                      "expressions": [
+                        {
+                          "type": "Value",
+                          "value": {
+                            "type": {
+                              "directive": "FunctionType",
+                              "implements": "",
+                              "inner_type": "",
+                              "param_id": "",
+                              "sub_directive": "None",
+                              "type": "Integer"
+                            },
+                            "value": "2"
+                          }
+                        }
+                      ],
+                      "id": "max"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "value"
+          }
+        ]
+      },
+      {
+        "function_id": "General_Switch",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "RandomInteger"
+                }
+              }
+            ],
+            "id": "value"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Integer"
+                          },
+                          "value": "0"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_Kill",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_Remove",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_Remove",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_Kill",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_Remove",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_Remove",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Integer"
+                          },
+                          "value": "2"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_Kill",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_Remove",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_Remove",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "CurrentStormgateRewardsGroup"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              }
+            ],
+            "id": "cases"
+          },
+          {
+            "id": "default"
+          }
+        ]
+      },
+      {
+        "function_id": "Actor_RemoveBuff",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "TypeRef",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Buff"
+                  },
+                  "value": "StormgateDiscoverTimerBuff"
+                }
+              }
+            ],
+            "id": "buff"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Integer_MaxStacks",
+                  "value_id": "max"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "stacks"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "StormgateGroup"
+                }
+              }
+            ],
+            "id": "target"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Actor_AnyActor",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "source"
+          }
+        ]
+      },
+      {
+        "function_id": "SpecialEffect_CreateOneShot",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "AssetRef",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "FXSquib"
+                  },
+                  "value": "BP_FXS_Stormgate_RewardClaimed"
+                }
+              }
+            ],
+            "id": "effect"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "StormgateGroup"
+                }
+              }
+            ],
+            "id": "source"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "StormgateGroup"
+                }
+              }
+            ],
+            "id": "target"
+          },
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "PlayerGroup_GetAllPlayers"
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "player_group"
+          }
+        ]
+      },
+      {
+        "function_id": "General_WaitForEvent",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Time_Forever",
+                  "value_id": "forever"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "timeout"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Timer_OnTimerExpired",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateCapturedStateTimer"
+                        }
+                      }
+                    ],
+                    "id": "timer"
+                  }
+                ]
+              }
+            ],
+            "id": "events"
+          },
+          {
+            "id": "conditions"
+          }
+        ]
+      },
+      {
+        "function_id": "Unit_IssueOrderWithNoTarget",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "StormgateGroup"
+                }
+              }
+            ],
+            "id": "unit"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "TypeRef",
+                    "implements": "ability_data",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": ""
+                  },
+                  "value": "MorphToStormgateObjectiveSubmerged"
+                }
+              }
+            ],
+            "id": "order"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Integer"
+                  },
+                  "value": "0"
+                }
+              }
+            ],
+            "id": "order_index"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Unit_OrderQueueOptions",
+                  "value_id": "replace"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "queue_order"
+          }
+        ]
+      },
+      {
+        "function_id": "Unit_ChangeOwner",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "indices": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "temp_index"
+                      }
+                    }
+                  ],
+                  "variable_id": "StormgateGroup"
+                }
+              }
+            ],
+            "id": "unit"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Player"
+                  },
+                  "value": "31"
+                }
+              }
+            ],
+            "id": "new_owner"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Unit_ClearDontClearOrders",
+                  "value_id": "clear"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "clear_orders"
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "events": [
+      {
+        "function_id": "Timer_OnTimerExpired",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateDiscoverableTimer1"
+                }
+              }
+            ],
+            "id": "timer"
+          }
+        ]
+      },
+      {
+        "function_id": "Timer_OnTimerExpired",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateDiscoverableTimer2"
+                }
+              }
+            ],
+            "id": "timer"
+          }
+        ]
+      },
+      {
+        "function_id": "Timer_OnTimerExpired",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateDiscoverableTimer3"
+                }
+              }
+            ],
+            "id": "timer"
+          }
+        ]
+      },
+      {
+        "function_id": "Timer_OnTimerExpired",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateDiscoverableTimer4"
+                }
+              }
+            ],
+            "id": "timer"
+          }
+        ]
+      },
+      {
+        "function_id": "Timer_OnTimerExpired",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateDiscoverableTimer5"
+                }
+              }
+            ],
+            "id": "timer"
+          }
+        ]
+      }
+    ],
+    "id": "SpawnStormgateReward_DiscoverableTimerExpiredDummy",
+    "variables": [
+      {
+        "id": "trigger_player",
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "name": "trigger_player",
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Player"
+        }
+      },
+      {
+        "id": "should_respawn_stormgate",
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Boolean"
+              },
+              "value": "true"
+            }
+          }
+        ],
+        "name": "should_respawn_stormgate",
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Boolean"
+        }
+      },
+      {
+        "id": "temp_index",
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "name": "temp_index",
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Integer"
+        }
+      },
+      {
+        "id": "RandomInteger",
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "name": "RandomInteger",
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Integer"
+        }
+      },
+      {
+        "id": "CurrentStormgateRewardsGroup",
+        "array_size": 3,
+        "initial_values": [
+          {
+            "preset": {
+              "preset_id": "Unit_NoUnit",
+              "value_id": "none"
+            },
+            "type": "Preset"
+          },
+          {
+            "preset": {
+              "preset_id": "Unit_NoUnit",
+              "value_id": "none"
+            },
+            "type": "Preset"
+          },
+          {
+            "preset": {
+              "preset_id": "Unit_NoUnit",
+              "value_id": "none"
+            },
+            "type": "Preset"
+          }
+        ],
+        "is_array": true,
+        "name": "CurrentStormgateRewardsGroup",
+        "per_element_initial_values": true,
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Unit"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

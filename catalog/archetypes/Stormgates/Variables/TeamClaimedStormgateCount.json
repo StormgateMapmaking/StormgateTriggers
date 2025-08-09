@@ -1,0 +1,31 @@
+{
+  "id": "TeamClaimedStormgateCount",
+  "__base_type": "GlobalVariable",
+  "array_size": 8,
+  "based_on": "GlobalVariable",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Integer"
+        },
+        "value": "0"
+      }
+    }
+  ],
+  "is_array": true,
+  "is_constant": false,
+  "name": "",
+  "per_element_initial_values": false,
+  "type": {
+    "param_id": "",
+    "directive": "FunctionType",
+    "implements": "",
+    "inner_type": "",
+    "sub_directive": "None",
+    "tags": [],
+    "type": "Integer"
+  }
+}

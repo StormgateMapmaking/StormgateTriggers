@@ -1,0 +1,201 @@
+{
+  "120A015F-4B8C-6FC2-D8C6-31A667F5F176": {
+    "facing": 0,
+    "kind": "ResourceB_Generator_2x2",
+    "player": 0,
+    "position": [
+      786432,
+      163840
+    ]
+  },
+  "24801836-A3C9-4FDB-9397-BE1E9A17BDF4": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar4",
+    "player": 31,
+    "position": [
+      0,
+      -262144
+    ]
+  },
+  "2723DE56-445A-7619-C924-F1AD9D57A545": {
+    "facing": 0,
+    "kind": "MegaResourceA",
+    "player": 0,
+    "position": [
+      0,
+      950272
+    ]
+  },
+  "422DC51D-45DD-19F8-3C92-84813BF06FEA": {
+    "facing": 0,
+    "kind": "ResourceB_Generator_2x2",
+    "player": 0,
+    "position": [
+      -163840,
+      786432
+    ]
+  },
+  "65CAF4B0-4E4D-4451-CF31-6B8646DC7001": {
+    "facing": 0,
+    "kind": "MegaResourceA",
+    "player": 0,
+    "position": [
+      -950272,
+      0
+    ]
+  },
+  "768D4687-41B5-95A0-54DF-0C85734D58C8": {
+    "facing": 0,
+    "kind": "locationMarkerPlayerStart",
+    "player": 3,
+    "position": [
+      0,
+      -786432
+    ]
+  },
+  "83D5B5C9-4CB3-2A30-C60A-75A5A6DAD320": {
+    "facing": 0,
+    "kind": "_StormgateObjectiveSubmerged1",
+    "player": 31,
+    "position": [
+      0,
+      262144
+    ]
+  },
+  "84516C1A-0534-4FC5-892D-EE47628B92D7": {
+    "facing": 0,
+    "kind": "_StormgateObjectiveSubmerged4",
+    "player": 31,
+    "position": [
+      0,
+      -262144
+    ]
+  },
+  "8A08C733-4A52-2C72-0EC9-AA907F5BB0EE": {
+    "facing": 0,
+    "kind": "MegaResourceA",
+    "player": 0,
+    "position": [
+      950272,
+      0
+    ]
+  },
+  "9201E0AF-4294-C008-3298-C28311A27CB6": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar3",
+    "player": 31,
+    "position": [
+      -262144,
+      0
+    ]
+  },
+  "94F9959A-471E-95A3-0EDC-C291625A5735": {
+    "facing": 0,
+    "kind": "MegaResourceA",
+    "player": 0,
+    "position": [
+      0,
+      -950272
+    ]
+  },
+  "AAA654D1-4C9E-492B-1900-038EF2B579ED": {
+    "facing": 0,
+    "kind": "ResourceB_Generator_2x2",
+    "player": 0,
+    "position": [
+      -786432,
+      -163840
+    ]
+  },
+  "BD119738-486C-0C84-293C-598F8EEEB05F": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar0",
+    "player": 31,
+    "position": [
+      0,
+      0
+    ]
+  },
+  "BF63395A-438C-9CBA-5410-0B825565AC8E": {
+    "facing": 0,
+    "kind": "_StormgateObjectiveSubmerged2",
+    "player": 31,
+    "position": [
+      262144,
+      0
+    ]
+  },
+  "C0F5EC75-4511-5929-0DAA-358BB221BFA5": {
+    "facing": 0,
+    "kind": "_StormgateObjectiveSubmerged0",
+    "player": 31,
+    "position": [
+      0,
+      0
+    ]
+  },
+  "C62C38EA-4F04-A6AF-072C-62995B4354A9": {
+    "facing": 0,
+    "kind": "locationMarkerPlayerStart",
+    "player": 2,
+    "position": [
+      786432,
+      0
+    ]
+  },
+  "CFE29C39-4127-3904-BA50-F685821AF185": {
+    "facing": 0,
+    "kind": "locationMarkerPlayerStart",
+    "player": 4,
+    "position": [
+      0,
+      786432
+    ]
+  },
+  "DBD97FD5-488E-16B7-FB17-5B91FB165EC9": {
+    "facing": 0,
+    "kind": "_StormgateObjectiveSubmerged3",
+    "player": 31,
+    "position": [
+      -262144,
+      0
+    ]
+  },
+  "DFC8F3A5-4EDB-F774-717B-0C834F401486": {
+    "facing": 0,
+    "kind": "locationMarkerPlayerStart",
+    "player": 1,
+    "position": [
+      -786432,
+      0
+    ]
+  },
+  "E497E41D-443A-DE94-6D5E-D0A9F6E54018": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar2",
+    "player": 31,
+    "position": [
+      262144,
+      0
+    ]
+  },
+  "EEF6AA63-41EB-9931-A22F-1D824360E902": {
+    "facing": 0,
+    "kind": "ResourceB_Generator_2x2",
+    "player": 0,
+    "position": [
+      163840,
+      -786432
+    ]
+  },
+  "F8ABBCF0-CBAF-4EF0-91F8-6056E7E33DBC": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar1",
+    "player": 31,
+    "position": [
+      0,
+      262144
+    ]
+  },
+  "version": 1
+}

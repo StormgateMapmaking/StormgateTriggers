@@ -1,0 +1,153 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "Game_SpawnStartingUnits",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "player_group"
+        }
+      ],
+      "sub_functions": []
+    },
+    {
+      "function_id": "Game_SpawnTopBar",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "player_group"
+        }
+      ],
+      "sub_functions": []
+    },
+    {
+      "function_id": "Game_SetStartingResources",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "player_group"
+        }
+      ],
+      "sub_functions": []
+    },
+    {
+      "function_id": "Game_ActivateEliminationWinCondition",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Game_EndCondition",
+                "value_id": "team_battle"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "win_condition"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Preset_OnOff",
+                "value_id": "on"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "toggle_structure_elimination"
+        }
+      ],
+      "sub_functions": []
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "Init_StormgateObjectives"
+              }
+            }
+          ],
+          "id": "trigger"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Trigger_CheckIgnoreConditions",
+                "value_id": "check"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "conditions"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Trigger_WaitDontWait",
+                "value_id": "nowait"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "wait"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Time_Forever",
+                "value_id": "forever"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "timeout"
+        }
+      ],
+      "sub_functions": []
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [
+    {
+      "function_id": "Game_OnMapInitialization"
+    }
+  ],
+  "id": "MeleeInitialization",
+  "variables": []
+}

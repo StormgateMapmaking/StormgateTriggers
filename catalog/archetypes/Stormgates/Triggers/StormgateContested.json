@@ -1,0 +1,1949 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "0"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "0"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "0"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "1"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "1"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "2"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "2"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "2"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "3"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "3"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "3"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "4"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "4"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "4"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "5"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "5"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "5"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "6"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "6"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "6"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "triggering_damage_source_team"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "7"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "7"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "eq"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateEnemyContested"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetTeamPlayers",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "triggering_damage_source_team"
+                                  }
+                                }
+                              ],
+                              "id": "team"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "TeamHasContestedStormgate",
+                          "indices": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "7"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Boolean"
+                          },
+                          "value": "true"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "conditions": [
+      {
+        "function_id": "Logic_AndOrConditions",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Logic_AndOrOperator",
+                  "value_id": "or"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "op"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Unit_IsType",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "unit"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "UnitData"
+                          },
+                          "value": "StormgateObjectiveLv1"
+                        }
+                      }
+                    ],
+                    "id": "type"
+                  }
+                ]
+              },
+              {
+                "function_id": "Unit_IsType",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "unit"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "UnitData"
+                          },
+                          "value": "StormgateObjectiveLv2"
+                        }
+                      }
+                    ],
+                    "id": "type"
+                  }
+                ]
+              },
+              {
+                "function_id": "Unit_IsType",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "unit"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "UnitData"
+                          },
+                          "value": "StormgateObjectiveLv3"
+                        }
+                      }
+                    ],
+                    "id": "type"
+                  }
+                ]
+              }
+            ],
+            "id": "conditions"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "function_id": "Unit_OnDamaged",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Unit_AnyUnit",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "unit"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Entity_AnyEntity",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "source"
+          }
+        ]
+      }
+    ],
+    "id": "StormgateContested",
+    "variables": [
+      {
+        "id": "triggering_damage_source_team",
+        "array_size": 0,
+        "initial_values": [
+          {
+            "type": "Function",
+            "function": {
+              "function_id": "Player_GetTeam",
+              "parameters": [
+                {
+                  "id": "player",
+                  "expressions": [
+                    {
+                      "type": "Function",
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "id": "unit",
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Damage_GetTriggeringDamageSourceUnit"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "is_array": false,
+        "is_constant": false,
+        "is_id_based_on_name": true,
+        "name": "triggering_damage_source_team",
+        "per_element_initial_values": false,
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "tags": [],
+          "type": "Integer"
+        }
+      },
+      {
+        "id": "TeamHasContestedStormgate",
+        "array_size": 8,
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          },
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Boolean"
+              },
+              "value": "false"
+            }
+          }
+        ],
+        "is_array": true,
+        "is_constant": false,
+        "is_id_based_on_name": true,
+        "name": "TeamHasContestedStormgate",
+        "per_element_initial_values": false,
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "tags": [],
+          "type": "Boolean"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

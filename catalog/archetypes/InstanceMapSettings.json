@@ -1,0 +1,42 @@
+﻿{
+  "based_on": "DefaultMapSettings",
+  "description": "Just another Stormgate map",
+  "id": "InstanceMapSettings",
+  "lighting_settings": "DefaultLightingTOD",
+  "map_music": "SoundData_Music_Multiplayer",
+  "player_slots": [
+    {
+      "attribute_instance_map_settings": {
+        "slot_type": {
+          "locked": true,
+          "value": "human"
+        },
+        "team": {
+          "locked": false,
+          "value": 0
+        }
+      }
+    },
+    {
+      "attribute_instance_map_settings": {
+        "slot_type": {
+          "locked": false,
+          "value": "ai"
+        },
+        "team": {
+          "locked": false,
+          "value": 1
+        }
+      }
+    }
+  ],
+  "tileset": "TerrainTileset_ForestAutumn",
+  "time_of_day": {
+    "dawn_sound": "SoundData_Daybreak",
+    "day_length": 210.0,
+    "dusk_sound": "SoundData_Nightfall",
+    "scale": 1.0,
+    "starting_hour": 6.0
+  },
+  "title": "Untitled Map"
+}

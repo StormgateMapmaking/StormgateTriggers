@@ -1,0 +1,3017 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "Environment_SetTimeOfDayScale",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Value"
+                  },
+                  "value": "1.0"
+                }
+              }
+            ],
+            "id": "scale"
+          }
+        ]
+      },
+      {
+        "function_id": "General_RepeatLoop",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "NumStormgatesFound"
+                }
+              }
+            ],
+            "id": "count"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "General_IfThenElse",
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Logic_Comparison",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "temp_index"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePoints"
+                                }
+                              }
+                            ],
+                            "id": "value1"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Logic_ComparisonOperator",
+                                  "value_id": "gr"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "op"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "value2"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "if"
+                  },
+                  {
+                    "functions": [
+                      {
+                        "function_id": "General_Switch",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "temp_index"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePoints"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "functions": [
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "morphAbilityTier"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "MorphAbilityData"
+                                                  },
+                                                  "value": "MorphToStormgateObjectiveLv1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Ping"
+                                                  },
+                                                  "value": "StormgateOpenPingLv1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_ModifyVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "ActiveStormgatesCount"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              },
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "2"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "morphAbilityTier"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "MorphAbilityData"
+                                                  },
+                                                  "value": "MorphToStormgateObjectiveLv2"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Ping"
+                                                  },
+                                                  "value": "StormgateOpenPingLv2"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_ModifyVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "ActiveStormgatesCount"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              },
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "3"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "morphAbilityTier"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "MorphAbilityData"
+                                                  },
+                                                  "value": "MorphToStormgateObjectiveLv3"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Ping"
+                                                  },
+                                                  "value": "StormgateOpenPingLv3"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_ModifyVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "ActiveStormgatesCount"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              }
+                            ],
+                            "id": "cases"
+                          },
+                          {
+                            "id": "default"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_Switch",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "temp_index"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "functions": [
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "0"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "CapturePoint_LockCapturePoint",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "StormgateCP1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "capturepoint"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Preset_LockUnlock",
+                                                  "value_id": "unlock"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "lock"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Ping_CreatePingAtPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "type"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Actor_GetPosition",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Variable",
+                                                          "variable": {
+                                                            "variable_id": "StormgateSubmerged1"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "actor"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "pos"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_NoSoundData",
+                                                  "value_id": "none"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "sound"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "PlayerGroup_GetAllPlayers"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "players"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_GlobalLocal",
+                                                  "value_id": "global"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "global_sound"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "ActiveStormgatePings"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Ping_GetLastCreatedPing"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_RemoveBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateInvulnerable_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Integer_MaxStacks",
+                                                  "value_id": "max"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Actor_AnyActor",
+                                                  "value_id": "any"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateOpen_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateTimeDisplay_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              },
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "CapturePoint_LockCapturePoint",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "StormgateCP2"
+                                                }
+                                              }
+                                            ],
+                                            "id": "capturepoint"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Preset_LockUnlock",
+                                                  "value_id": "unlock"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "lock"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Ping_CreatePingAtPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "type"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Actor_GetPosition",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Variable",
+                                                          "variable": {
+                                                            "variable_id": "StormgateSubmerged2"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "actor"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "pos"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_NoSoundData",
+                                                  "value_id": "none"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "sound"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "PlayerGroup_GetAllPlayers"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "players"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_GlobalLocal",
+                                                  "value_id": "global"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "global_sound"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "ActiveStormgatePings"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Ping_GetLastCreatedPing"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_RemoveBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateInvulnerable_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Integer_MaxStacks",
+                                                  "value_id": "max"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Actor_AnyActor",
+                                                  "value_id": "any"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateOpen_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateTimeDisplay_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              },
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "2"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "CapturePoint_LockCapturePoint",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "StormgateCP3"
+                                                }
+                                              }
+                                            ],
+                                            "id": "capturepoint"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Preset_LockUnlock",
+                                                  "value_id": "unlock"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "lock"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Ping_CreatePingAtPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "type"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Actor_GetPosition",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Variable",
+                                                          "variable": {
+                                                            "variable_id": "StormgateSubmerged3"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "actor"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "pos"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_NoSoundData",
+                                                  "value_id": "none"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "sound"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "PlayerGroup_GetAllPlayers"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "players"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_GlobalLocal",
+                                                  "value_id": "global"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "global_sound"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "ActiveStormgatePings"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Ping_GetLastCreatedPing"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_RemoveBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateInvulnerable_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Integer_MaxStacks",
+                                                  "value_id": "max"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Actor_AnyActor",
+                                                  "value_id": "any"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateOpen_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateTimeDisplay_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              },
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "3"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "CapturePoint_LockCapturePoint",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "StormgateCP4"
+                                                }
+                                              }
+                                            ],
+                                            "id": "capturepoint"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Preset_LockUnlock",
+                                                  "value_id": "unlock"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "lock"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Ping_CreatePingAtPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "type"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Actor_GetPosition",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Variable",
+                                                          "variable": {
+                                                            "variable_id": "StormgateSubmerged4"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "actor"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "pos"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_NoSoundData",
+                                                  "value_id": "none"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "sound"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "PlayerGroup_GetAllPlayers"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "players"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_GlobalLocal",
+                                                  "value_id": "global"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "global_sound"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "ActiveStormgatePings"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Ping_GetLastCreatedPing"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_RemoveBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateInvulnerable_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Integer_MaxStacks",
+                                                  "value_id": "max"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Actor_AnyActor",
+                                                  "value_id": "any"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateOpen_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateTimeDisplay_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              },
+                              {
+                                "function_id": "General_SwitchCase",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "implements": "",
+                                            "inner_type": "",
+                                            "param_id": "",
+                                            "sub_directive": "None",
+                                            "type": "Integer"
+                                          },
+                                          "value": "4"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ],
+                                "sub_functions": [
+                                  {
+                                    "functions": [
+                                      {
+                                        "function_id": "CapturePoint_LockCapturePoint",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "StormgateCP5"
+                                                }
+                                              }
+                                            ],
+                                            "id": "capturepoint"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Preset_LockUnlock",
+                                                  "value_id": "unlock"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "lock"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Ping_CreatePingAtPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "temp_ping"
+                                                }
+                                              }
+                                            ],
+                                            "id": "type"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Actor_GetPosition",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Variable",
+                                                          "variable": {
+                                                            "variable_id": "StormgateSubmerged5"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "actor"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "pos"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_NoSoundData",
+                                                  "value_id": "none"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "sound"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "PlayerGroup_GetAllPlayers"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "players"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Sound_GlobalLocal",
+                                                  "value_id": "global"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "global_sound"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Variable_SetVariable",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "ActiveStormgatePings"
+                                                }
+                                              }
+                                            ],
+                                            "id": "variable"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Ping_GetLastCreatedPing"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "value"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_RemoveBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateInvulnerable_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Integer_MaxStacks",
+                                                  "value_id": "max"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Actor_AnyActor",
+                                                  "value_id": "any"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateOpen_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "function_id": "Actor_ApplyBuff",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Buff"
+                                                  },
+                                                  "value": "StormgateTimeDisplay_Buff"
+                                                }
+                                              }
+                                            ],
+                                            "id": "buff"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "implements": "",
+                                                    "inner_type": "",
+                                                    "param_id": "",
+                                                    "sub_directive": "None",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "stacks"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "target"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "indices": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "temp_index"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "variable_id": "StormgateGroup"
+                                                }
+                                              }
+                                            ],
+                                            "id": "source"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "id": "actions"
+                                  }
+                                ]
+                              }
+                            ],
+                            "id": "cases"
+                          },
+                          {
+                            "id": "default"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "then"
+                  },
+                  {
+                    "id": "else"
+                  }
+                ]
+              },
+              {
+                "function_id": "Variable_ModifyVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "temp_index"
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Math_ArithmeticOperator",
+                          "value_id": "plus"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "actions"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "ActiveStormgatesCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "gr"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Debug_DebugMessage",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Debug_DebugMessageTag",
+                          "value_id": "notag"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "tag"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "String"
+                          },
+                          "value": "more than one stormgate point active!!!!"
+                        }
+                      }
+                    ],
+                    "id": "message"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Time"
+                          },
+                          "value": "60.0"
+                        }
+                      }
+                    ],
+                    "id": "duration"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateSpawnedMany"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Debug_DebugMessage",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Debug_DebugMessageTag",
+                          "value_id": "notag"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "tag"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "String"
+                          },
+                          "value": "one stormgate point active!!!!"
+                        }
+                      }
+                    ],
+                    "id": "message"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Time"
+                          },
+                          "value": "60.0"
+                        }
+                      }
+                    ],
+                    "id": "duration"
+                  }
+                ]
+              },
+              {
+                "function_id": "Sound_PlaySoundForPlayers",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "SoundData"
+                          },
+                          "value": "SoundData_Announcer_Stormgates_OnStormgateSpawnedSingle"
+                        }
+                      }
+                    ],
+                    "id": "sound"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetAllPlayers"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "players"
+                  }
+                ]
+              }
+            ],
+            "id": "else"
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "id": "SpawnStormgateObjectives",
+    "variables": [
+      {
+        "id": "ActiveStormgatesCount",
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "name": "ActiveStormgatesCount",
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Integer"
+        }
+      },
+      {
+        "id": "temp_index",
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "name": "temp_index",
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Integer"
+        }
+      },
+      {
+        "id": "morphAbilityTier",
+        "initial_values": [
+          {
+            "preset": {
+              "preset_id": "TypeRef_NoTypeRef",
+              "value_id": "none"
+            },
+            "type": "Preset"
+          }
+        ],
+        "name": "morphAbilityTier",
+        "type": {
+          "directive": "TypeRef",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "MorphAbilityData"
+        }
+      },
+      {
+        "id": "temp_ping",
+        "initial_values": [
+          {
+            "preset": {
+              "preset_id": "TypeRef_NoTypeRef",
+              "value_id": "none"
+            },
+            "type": "Preset"
+          }
+        ],
+        "name": "temp_ping",
+        "type": {
+          "directive": "TypeRef",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Ping"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

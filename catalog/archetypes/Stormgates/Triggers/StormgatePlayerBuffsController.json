@@ -1,0 +1,912 @@
+{
+  "data": {
+    "id": "StormgatePlayerBuffsController",
+    "actions": [
+      {
+        "function_id": "PlayerGroup_ForEachPlayerInGroup",
+        "parameters": [
+          {
+            "id": "players",
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "PlayerGroup_GetAllPlayers",
+                  "parameters": [],
+                  "sub_functions": []
+                },
+                "type": "Function"
+              }
+            ]
+          }
+        ],
+        "sub_functions": [
+          {
+            "id": "actions",
+            "functions": [
+              {
+                "function_id": "Player_RemovePlayerBuff",
+                "parameters": [
+                  {
+                    "id": "buff",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "tags": [],
+                            "type": "PlayerBuff"
+                          },
+                          "value": "StormgateDamageModifier1_PlayerBuff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "player",
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetCurrentPlayer",
+                          "parameters": [],
+                          "sub_functions": []
+                        },
+                        "type": "Function"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "stacks",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": []
+              },
+              {
+                "function_id": "Player_RemovePlayerBuff",
+                "parameters": [
+                  {
+                    "id": "buff",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "PlayerBuff"
+                          },
+                          "value": "StormgateDamageModifier2_PlayerBuff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "player",
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetCurrentPlayer",
+                          "parameters": [],
+                          "sub_functions": []
+                        },
+                        "type": "Function"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "stacks",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": []
+              },
+              {
+                "function_id": "Player_RemovePlayerBuff",
+                "parameters": [
+                  {
+                    "id": "buff",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "PlayerBuff"
+                          },
+                          "value": "StormgateDamageModifier3_PlayerBuff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "player",
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetCurrentPlayer",
+                          "parameters": [],
+                          "sub_functions": []
+                        },
+                        "type": "Function"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "stacks",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": []
+              },
+              {
+                "function_id": "Player_RemovePlayerBuff",
+                "parameters": [
+                  {
+                    "id": "buff",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "PlayerBuff"
+                          },
+                          "value": "StormgateDamageModifier4_PlayerBuff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "player",
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetCurrentPlayer",
+                          "parameters": [],
+                          "sub_functions": []
+                        },
+                        "type": "Function"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "stacks",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": []
+              },
+              {
+                "function_id": "Player_RemovePlayerBuff",
+                "parameters": [
+                  {
+                    "id": "buff",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "TypeRef",
+                            "type": "PlayerBuff"
+                          },
+                          "value": "StormgateDamageModifier5_PlayerBuff"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "player",
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetCurrentPlayer",
+                          "parameters": [],
+                          "sub_functions": []
+                        },
+                        "type": "Function"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "stacks",
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": []
+              },
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "id": "variable",
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "team_buff_value",
+                          "indices": []
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "value",
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Math_Arithmetic_Integer",
+                          "parameters": [
+                            {
+                              "id": "value1",
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "MaxClaimedStormgateCount",
+                                    "indices": []
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "op",
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Math_ArithmeticOperator",
+                                    "value_id": "minus"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "value2",
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "TeamClaimedStormgateCount",
+                                    "indices": [
+                                      {
+                                        "type": "Function",
+                                        "function": {
+                                          "function_id": "Player_GetTeam",
+                                          "parameters": [
+                                            {
+                                              "id": "player",
+                                              "expressions": [
+                                                {
+                                                  "function": {
+                                                    "function_id": "PlayerGroup_GetCurrentPlayer"
+                                                  },
+                                                  "type": "Function"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "sub_functions": []
+                        },
+                        "type": "Function"
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": []
+              },
+              {
+                "function_id": "General_Switch",
+                "parameters": [
+                  {
+                    "id": "value",
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "team_buff_value"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "id": "cases",
+                    "functions": [
+                      {
+                        "function_id": "General_SwitchCase",
+                        "parameters": [
+                          {
+                            "id": "value",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "id": "actions",
+                            "functions": [
+                              {
+                                "function_id": "Player_ApplyPlayerBuff",
+                                "parameters": [
+                                  {
+                                    "id": "buff",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "PlayerBuff"
+                                          },
+                                          "value": "StormgateDamageModifier1_PlayerBuff"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "player",
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "PlayerGroup_GetCurrentPlayer"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "stacks",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "sub_functions": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_SwitchCase",
+                        "parameters": [
+                          {
+                            "id": "value",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "2"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "id": "actions",
+                            "functions": [
+                              {
+                                "function_id": "Player_ApplyPlayerBuff",
+                                "parameters": [
+                                  {
+                                    "id": "buff",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "PlayerBuff"
+                                          },
+                                          "value": "StormgateDamageModifier2_PlayerBuff"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "player",
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "PlayerGroup_GetCurrentPlayer"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "stacks",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "sub_functions": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_SwitchCase",
+                        "parameters": [
+                          {
+                            "id": "value",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "3"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "id": "actions",
+                            "functions": [
+                              {
+                                "function_id": "Player_ApplyPlayerBuff",
+                                "parameters": [
+                                  {
+                                    "id": "buff",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "PlayerBuff"
+                                          },
+                                          "value": "StormgateDamageModifier3_PlayerBuff"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "player",
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "PlayerGroup_GetCurrentPlayer"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "stacks",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "sub_functions": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_SwitchCase",
+                        "parameters": [
+                          {
+                            "id": "value",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "4"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "id": "actions",
+                            "functions": [
+                              {
+                                "function_id": "Player_ApplyPlayerBuff",
+                                "parameters": [
+                                  {
+                                    "id": "buff",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "PlayerBuff"
+                                          },
+                                          "value": "StormgateDamageModifier4_PlayerBuff"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "player",
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "PlayerGroup_GetCurrentPlayer"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "stacks",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "sub_functions": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_SwitchCase",
+                        "parameters": [
+                          {
+                            "id": "value",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "5"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": [
+                          {
+                            "id": "actions",
+                            "functions": [
+                              {
+                                "function_id": "Player_ApplyPlayerBuff",
+                                "parameters": [
+                                  {
+                                    "id": "buff",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "PlayerBuff"
+                                          },
+                                          "value": "StormgateDamageModifier5_PlayerBuff"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "player",
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "PlayerGroup_GetCurrentPlayer"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "stacks",
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "sub_functions": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "default",
+                    "functions": []
+                  }
+                ]
+              },
+              {
+                "function_id": "General_IfThenElse",
+                "parameters": [],
+                "sub_functions": [
+                  {
+                    "id": "if",
+                    "functions": [
+                      {
+                        "function_id": "Logic_Comparison",
+                        "parameters": [
+                          {
+                            "id": "value1",
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "team_buff_value"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "id": "op",
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Logic_ComparisonOperator",
+                                  "value_id": "gr"
+                                },
+                                "type": "Preset"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "value2",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "5"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "then",
+                    "functions": [
+                      {
+                        "function_id": "Player_ApplyPlayerBuff",
+                        "parameters": [
+                          {
+                            "id": "buff",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "PlayerBuff"
+                                  },
+                                  "value": "StormgateDamageModifier5_PlayerBuff"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "id": "player",
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetCurrentPlayer"
+                                },
+                                "type": "Function"
+                              }
+                            ]
+                          },
+                          {
+                            "id": "stacks",
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "sub_functions": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "else",
+                    "functions": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "conditions": [],
+    "dev_only": false,
+    "enabled": true,
+    "events": [],
+    "variables": [
+      {
+        "id": "team_buff_value",
+        "array_size": 0,
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "is_array": false,
+        "is_constant": false,
+        "is_id_based_on_name": true,
+        "name": "team_buff_value",
+        "per_element_initial_values": false,
+        "type": {
+          "param_id": "",
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "sub_directive": "None",
+          "tags": [],
+          "type": "Integer"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

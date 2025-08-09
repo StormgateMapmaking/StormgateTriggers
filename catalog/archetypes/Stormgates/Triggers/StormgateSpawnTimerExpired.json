@@ -1,0 +1,131 @@
+{
+  "actions": [
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "implements": "",
+                  "inner_type": "",
+                  "param_id": "",
+                  "sub_directive": "None",
+                  "type": "Trigger"
+                },
+                "value": "SpawnStormgateObjectives"
+              }
+            }
+          ],
+          "id": "trigger"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Trigger_CheckIgnoreConditions",
+                "value_id": "check"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "conditions"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Trigger_WaitDontWait",
+                "value_id": "nowait"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "wait"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Time_Forever",
+                "value_id": "forever"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "timeout"
+        }
+      ]
+    },
+    {
+      "function_id": "Timer_StartTimer",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "StormgateDespawnTimer"
+              }
+            }
+          ],
+          "id": "timer"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "implements": "",
+                  "inner_type": "",
+                  "param_id": "",
+                  "sub_directive": "None",
+                  "type": "Time"
+                },
+                "value": "85.0"
+              }
+            }
+          ],
+          "id": "duration"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Timer_RepeatingOption",
+                "value_id": "oneshot"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "repeating"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [
+    {
+      "function_id": "Timer_OnTimerExpired",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "StormgateSpawnTimer"
+              }
+            }
+          ],
+          "id": "timer"
+        }
+      ]
+    }
+  ],
+  "id": "StormgateSpawnTimerExpired"
+}

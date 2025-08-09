@@ -1,0 +1,34 @@
+{
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "NumStormgatesFound",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Integer"
+        },
+        "value": "0"
+      }
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "NumStormgatesFound",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "implements": "",
+    "inner_type": "",
+    "param_id": "",
+    "sub_directive": "None",
+    "tags": [],
+    "type": "Integer"
+  }
+}

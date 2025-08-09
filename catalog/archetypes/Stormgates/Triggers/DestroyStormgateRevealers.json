@@ -1,0 +1,121 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "PlayerGroup_ForEachPlayerInGroup",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "PlayerGroup_GetAllPlayers"
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "players"
+          }
+        ],
+        "sub_functions": [
+          {
+            "id": "actions",
+            "functions": [
+              {
+                "function_id": "Revealer_DestroyRevealer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetValue_Revealer",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetBlackboardOfEntity",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "indices": [
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "CurrentStormgateIndex"
+                                                  }
+                                                }
+                                              ],
+                                              "variable_id": "StormgateGroup"
+                                            }
+                                          }
+                                        ],
+                                        "id": "entity"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "blackboard"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "String_FormatString",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Value",
+                                            "value": {
+                                              "type": {
+                                                "directive": "FunctionType",
+                                                "type": "String"
+                                              },
+                                              "value": "revealer_player_{0}"
+                                            }
+                                          }
+                                        ],
+                                        "id": "format"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "function": {
+                                              "function_id": "PlayerGroup_GetCurrentIndex"
+                                            },
+                                            "type": "Function"
+                                          }
+                                        ],
+                                        "id": "args"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "key"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "revealer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "id": "DestroyStormgateRevealers"
+  },
+  "meta": {}
+}

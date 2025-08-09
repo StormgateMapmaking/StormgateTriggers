@@ -1,0 +1,4717 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "Sound_PlaySoundForPlayers",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "TypeRef",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "SoundData"
+                  },
+                  "value": "SoundData_UI_3v3_BatteryPickup"
+                }
+              }
+            ],
+            "id": "sound"
+          },
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "PlayerGroup_GetTeamPlayers",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "function": {
+                            "function_id": "Team_GetTriggeringTeam"
+                          },
+                          "type": "Function"
+                        }
+                      ],
+                      "id": "team"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "players"
+          }
+        ]
+      },
+      {
+        "function_id": "General_ForEachInteger",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "type": "Integer"
+                  },
+                  "value": "0"
+                }
+              }
+            ],
+            "id": "start"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "type": "Integer"
+                  },
+                  "value": "7"
+                }
+              }
+            ],
+            "id": "end"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "team_index"
+                }
+              }
+            ],
+            "id": "variable"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "General_IfThenElse",
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Logic_Comparison",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Team_GetTriggeringTeam"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "value1"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Logic_ComparisonOperator",
+                                  "value_id": "eq"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "op"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "team_index"
+                                }
+                              }
+                            ],
+                            "id": "value2"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "if"
+                  },
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Variable_ModifyVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "team_index"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "TeamClaimedStormgateCount"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Math_ArithmeticOperator",
+                                  "value_id": "plus"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "op"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Sound_PlaySoundForPlayers",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "SoundData"
+                                  },
+                                  "value": "SoundData_Announcer_Stormgates_OnStormgateWon"
+                                }
+                              }
+                            ],
+                            "id": "sound"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetTeamPlayers",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "team_index"
+                                          }
+                                        }
+                                      ],
+                                      "id": "team"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "players"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Sound_PlaySoundForPlayers",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "SoundData"
+                                  },
+                                  "value": "SoundData_Announcer_Stormgates_OnStormgateLost"
+                                }
+                              }
+                            ],
+                            "id": "sound"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetTeamPlayers",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "team_index"
+                                          }
+                                        }
+                                      ],
+                                      "id": "team"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "players"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Debug_DebugMessage",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Debug_DebugMessageTag",
+                                  "value_id": "notag"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "tag"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "String"
+                                  },
+                                  "value": "TEAM CAPTURED"
+                                }
+                              }
+                            ],
+                            "id": "message"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "30.0"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "then"
+                  },
+                  {
+                    "id": "else"
+                  }
+                ]
+              }
+            ],
+            "id": "actions"
+          }
+        ]
+      },
+      {
+        "function_id": "General_IfThenElse",
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "Logic_Comparison",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "indices": [
+                            {
+                              "type": "Function",
+                              "function": {
+                                "function_id": "Team_GetTriggeringTeam"
+                              }
+                            }
+                          ],
+                          "variable_id": "TeamClaimedStormgateCount"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Logic_ComparisonOperator",
+                          "value_id": "gr"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "MaxClaimedStormgateCount"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              }
+            ],
+            "id": "if"
+          },
+          {
+            "functions": [
+              {
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "MaxClaimedStormgateCount"
+                        }
+                      }
+                    ],
+                    "id": "variable"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "indices": [
+                            {
+                              "type": "Function",
+                              "function": {
+                                "function_id": "Team_GetTriggeringTeam"
+                              }
+                            }
+                          ],
+                          "variable_id": "TeamClaimedStormgateCount"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ],
+            "id": "then"
+          },
+          {
+            "id": "else"
+          }
+        ]
+      },
+      {
+        "function_id": "Trigger_Run",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "TypeRef",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Trigger"
+                  },
+                  "value": "StormgatePlayerBuffsController"
+                }
+              }
+            ],
+            "id": "trigger"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Trigger_CheckIgnoreConditions",
+                  "value_id": "check"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "conditions"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Trigger_WaitDontWait",
+                  "value_id": "nowait"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "wait"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Time_Forever",
+                  "value_id": "forever"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "timeout"
+          }
+        ]
+      },
+      {
+        "function_id": "General_Switch",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "CapturePoint_GetTriggeringCapturePoint"
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "value"
+          }
+        ],
+        "sub_functions": [
+          {
+            "functions": [
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateCP1"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_SetHealthPercentage",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Value"
+                                  },
+                                  "value": "100"
+                                }
+                              }
+                            ],
+                            "id": "health"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "CapturePoint_LockCapturePoint",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateCP1"
+                                }
+                              }
+                            ],
+                            "id": "capturepoint"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Preset_LockUnlock",
+                                  "value_id": "lock"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "lock"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_IssueOrderWithNoTarget",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "ability_data",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": ""
+                                  },
+                                  "value": "MorphToStormgateCaptured"
+                                }
+                              }
+                            ],
+                            "id": "order"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "order_index"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_OrderQueueOptions",
+                                  "value_id": "replace"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "queue_order"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateInvulnerable_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Trigger_Run",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "Trigger"
+                                  },
+                                  "value": "DestroyStormgateRevealers"
+                                }
+                              }
+                            ],
+                            "id": "trigger"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Ping_Destroy",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePings"
+                                }
+                              }
+                            ],
+                            "id": "ping"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateOpen_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDeactivating_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateTimeDisplay_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Timer_StartTimer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateDiscoverableTimer1"
+                                }
+                              }
+                            ],
+                            "id": "timer"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "21.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Timer_RepeatingOption",
+                                  "value_id": "oneshot"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "repeating"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDiscoverTimerBuff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_Wait",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "1.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged1"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup1"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup1"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup1"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateCP2"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_SetHealthPercentage",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Value"
+                                  },
+                                  "value": "100"
+                                }
+                              }
+                            ],
+                            "id": "health"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "CapturePoint_LockCapturePoint",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateCP2"
+                                }
+                              }
+                            ],
+                            "id": "capturepoint"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Preset_LockUnlock",
+                                  "value_id": "lock"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "lock"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_IssueOrderWithNoTarget",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "ability_data",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": ""
+                                  },
+                                  "value": "MorphToStormgateCaptured"
+                                }
+                              }
+                            ],
+                            "id": "order"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "order_index"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_OrderQueueOptions",
+                                  "value_id": "replace"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "queue_order"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateInvulnerable_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Trigger_Run",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "Trigger"
+                                  },
+                                  "value": "DestroyStormgateRevealers"
+                                }
+                              }
+                            ],
+                            "id": "trigger"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Ping_Destroy",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePings"
+                                }
+                              }
+                            ],
+                            "id": "ping"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateOpen_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDeactivating_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateTimeDisplay_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Timer_StartTimer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateDiscoverableTimer2"
+                                }
+                              }
+                            ],
+                            "id": "timer"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "21.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Timer_RepeatingOption",
+                                  "value_id": "oneshot"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "repeating"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDiscoverTimerBuff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_Wait",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "1.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged2"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup2"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup2"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup2"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateCP3"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_SetHealthPercentage",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Value"
+                                  },
+                                  "value": "100"
+                                }
+                              }
+                            ],
+                            "id": "health"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "CapturePoint_LockCapturePoint",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateCP3"
+                                }
+                              }
+                            ],
+                            "id": "capturepoint"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Preset_LockUnlock",
+                                  "value_id": "lock"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "lock"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_IssueOrderWithNoTarget",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "ability_data",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": ""
+                                  },
+                                  "value": "MorphToStormgateCaptured"
+                                }
+                              }
+                            ],
+                            "id": "order"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "order_index"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_OrderQueueOptions",
+                                  "value_id": "replace"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "queue_order"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateInvulnerable_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Trigger_Run",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "Trigger"
+                                  },
+                                  "value": "DestroyStormgateRevealers"
+                                }
+                              }
+                            ],
+                            "id": "trigger"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Ping_Destroy",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePings"
+                                }
+                              }
+                            ],
+                            "id": "ping"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateOpen_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDeactivating_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateTimeDisplay_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Timer_StartTimer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateDiscoverableTimer3"
+                                }
+                              }
+                            ],
+                            "id": "timer"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "21.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Timer_RepeatingOption",
+                                  "value_id": "oneshot"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "repeating"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDiscoverTimerBuff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_Wait",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "1.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged3"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup3"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup3"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup3"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateCP4"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_SetHealthPercentage",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Value"
+                                  },
+                                  "value": "100"
+                                }
+                              }
+                            ],
+                            "id": "health"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "CapturePoint_LockCapturePoint",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateCP4"
+                                }
+                              }
+                            ],
+                            "id": "capturepoint"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Preset_LockUnlock",
+                                  "value_id": "lock"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "lock"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_IssueOrderWithNoTarget",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "ability_data",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": ""
+                                  },
+                                  "value": "MorphToStormgateCaptured"
+                                }
+                              }
+                            ],
+                            "id": "order"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "order_index"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_OrderQueueOptions",
+                                  "value_id": "replace"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "queue_order"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateInvulnerable_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Trigger_Run",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "Trigger"
+                                  },
+                                  "value": "DestroyStormgateRevealers"
+                                }
+                              }
+                            ],
+                            "id": "trigger"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Ping_Destroy",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "3"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePings"
+                                }
+                              }
+                            ],
+                            "id": "ping"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateOpen_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDeactivating_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateTimeDisplay_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Timer_StartTimer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateDiscoverableTimer4"
+                                }
+                              }
+                            ],
+                            "id": "timer"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "21.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Timer_RepeatingOption",
+                                  "value_id": "oneshot"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "repeating"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDiscoverTimerBuff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_Wait",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "1.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged4"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup4"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup4"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup4"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              },
+              {
+                "function_id": "General_SwitchCase",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "StormgateCP5"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ],
+                "sub_functions": [
+                  {
+                    "functions": [
+                      {
+                        "function_id": "Unit_SetHealthPercentage",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Value"
+                                  },
+                                  "value": "100"
+                                }
+                              }
+                            ],
+                            "id": "health"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "CapturePoint_LockCapturePoint",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateCP5"
+                                }
+                              }
+                            ],
+                            "id": "capturepoint"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Preset_LockUnlock",
+                                  "value_id": "lock"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "lock"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_IssueOrderWithNoTarget",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "ability_data",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": ""
+                                  },
+                                  "value": "MorphToStormgateCaptured"
+                                }
+                              }
+                            ],
+                            "id": "order"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "0"
+                                }
+                              }
+                            ],
+                            "id": "order_index"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_OrderQueueOptions",
+                                  "value_id": "replace"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "queue_order"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateInvulnerable_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Trigger_Run",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Trigger"
+                                  },
+                                  "value": "DestroyStormgateRevealers"
+                                }
+                              }
+                            ],
+                            "id": "trigger"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Ping_Destroy",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "4"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgatePings"
+                                }
+                              }
+                            ],
+                            "id": "ping"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateOpen_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDeactivating_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_RemoveBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateTimeDisplay_Buff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Integer_MaxStacks",
+                                  "value_id": "max"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Actor_AnyActor",
+                                  "value_id": "any"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Timer_StartTimer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateDiscoverableTimer5"
+                                }
+                              }
+                            ],
+                            "id": "timer"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "21.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Timer_RepeatingOption",
+                                  "value_id": "oneshot"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "repeating"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Actor_ApplyBuff",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Buff"
+                                  },
+                                  "value": "StormgateDiscoverTimerBuff"
+                                }
+                              }
+                            ],
+                            "id": "buff"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "stacks"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "target"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "source"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "General_Wait",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "implements": "",
+                                    "inner_type": "",
+                                    "param_id": "",
+                                    "sub_directive": "None",
+                                    "type": "Time"
+                                  },
+                                  "value": "1.5"
+                                }
+                              }
+                            ],
+                            "id": "duration"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "StormgateSubmerged5"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup5"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "1"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup5"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Unit_ChangeOwner",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "indices": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "implements": "",
+                                          "inner_type": "",
+                                          "param_id": "",
+                                          "sub_directive": "None",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "variable_id": "ActiveStormgateRewardsGroup5"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Function",
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                }
+                              }
+                            ],
+                            "id": "new_owner"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Unit_ClearDontClearOrders",
+                                  "value_id": "clear"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "clear_orders"
+                          }
+                        ]
+                      }
+                    ],
+                    "id": "actions"
+                  }
+                ]
+              }
+            ],
+            "id": "cases"
+          },
+          {
+            "id": "default"
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "events": [
+      {
+        "function_id": "CapturePoint_OnControlChanged",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Team_AnyTeam",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "team"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Preset_GainsLoses",
+                  "value_id": "gains"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "gains"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateCP1"
+                }
+              }
+            ],
+            "id": "capturepoint"
+          }
+        ]
+      },
+      {
+        "function_id": "CapturePoint_OnControlChanged",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Team_AnyTeam",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "team"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Preset_GainsLoses",
+                  "value_id": "gains"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "gains"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateCP2"
+                }
+              }
+            ],
+            "id": "capturepoint"
+          }
+        ]
+      },
+      {
+        "function_id": "CapturePoint_OnControlChanged",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Team_AnyTeam",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "team"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Preset_GainsLoses",
+                  "value_id": "gains"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "gains"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateCP3"
+                }
+              }
+            ],
+            "id": "capturepoint"
+          }
+        ]
+      },
+      {
+        "function_id": "CapturePoint_OnControlChanged",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Team_AnyTeam",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "team"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Preset_GainsLoses",
+                  "value_id": "gains"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "gains"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateCP4"
+                }
+              }
+            ],
+            "id": "capturepoint"
+          }
+        ]
+      },
+      {
+        "function_id": "CapturePoint_OnControlChanged",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Team_AnyTeam",
+                  "value_id": "any"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "team"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Preset_GainsLoses",
+                  "value_id": "gains"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "gains"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Variable",
+                "variable": {
+                  "variable_id": "StormgateCP5"
+                }
+              }
+            ],
+            "id": "capturepoint"
+          }
+        ]
+      }
+    ],
+    "id": "StormgateObjectiveCaptured_Discoverable",
+    "variables": [
+      {
+        "id": "team_index",
+        "array_size": 0,
+        "initial_values": [
+          {
+            "type": "Value",
+            "value": {
+              "type": {
+                "directive": "FunctionType",
+                "implements": "",
+                "inner_type": "",
+                "param_id": "",
+                "sub_directive": "None",
+                "type": "Integer"
+              },
+              "value": "0"
+            }
+          }
+        ],
+        "is_array": false,
+        "is_constant": false,
+        "name": "team_index",
+        "per_element_initial_values": false,
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "type": "Integer"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

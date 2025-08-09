@@ -1,0 +1,270 @@
+{
+  "data": {
+    "actions": [
+      {
+        "function_id": "PlayerGroup_ForEachPlayerInGroup",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "PlayerGroup_GetAllPlayers"
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "players"
+          }
+        ],
+        "sub_functions": [
+          {
+            "id": "actions",
+            "functions": [
+              {
+                "function_id": "Revealer_CreateRevealer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "PlayerGroup_GetCurrentPlayer"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "player"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "CurrentStormgateLocation"
+                        }
+                      }
+                    ],
+                    "id": "position"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Math_Arithmetic_Integer",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "Integer"
+                                    },
+                                    "value": "8"
+                                  }
+                                }
+                              ],
+                              "id": "value1"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Math_ArithmeticOperator",
+                                    "value_id": "minus"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ],
+                              "id": "op"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Math_Arithmetic_Integer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "TeamClaimedStormgateCount",
+                                              "indices": [
+                                                {
+                                                  "type": "Function",
+                                                  "function": {
+                                                    "function_id": "Player_GetTeam",
+                                                    "parameters": [
+                                                      {
+                                                        "id": "player",
+                                                        "expressions": [
+                                                          {
+                                                            "function": {
+                                                              "function_id": "PlayerGroup_GetCurrentPlayer"
+                                                            },
+                                                            "type": "Function"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        "id": "value1"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "preset": {
+                                              "preset_id": "Math_ArithmeticOperator",
+                                              "value_id": "minus"
+                                            },
+                                            "type": "Preset"
+                                          }
+                                        ],
+                                        "id": "op"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "MaxClaimedStormgateCount"
+                                            }
+                                          }
+                                        ],
+                                        "id": "value2"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "value2"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "vision_radius"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Time_Forever",
+                          "value_id": "forever"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "lifetime"
+                  }
+                ]
+              },
+              {
+                "function_id": "Blackboard_SetValue_Revealer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfEntity",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "indices": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "CurrentStormgateIndex"
+                                        }
+                                      }
+                                    ],
+                                    "variable_id": "StormgateGroup"
+                                  }
+                                }
+                              ],
+                              "id": "entity"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "implements": "",
+                                      "inner_type": "",
+                                      "param_id": "",
+                                      "sub_directive": "None",
+                                      "type": "String"
+                                    },
+                                    "value": "revealer_player_{0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "PlayerGroup_GetCurrentIndex"
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "key"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Revealer_GetLastCreatedRevealer"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "based_on": "Trigger",
+    "id": "SpawnStormgateRevealers"
+  },
+  "meta": {}
+}

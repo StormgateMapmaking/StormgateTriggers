@@ -1,0 +1,30 @@
+{
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "MaxClaimedStormgateCount",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Integer"
+        },
+        "value": "0"
+      }
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "MaxClaimedStormgateCount",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "implements": "",
+    "inner_type": "",
+    "param_id": "",
+    "sub_directive": "None",
+    "tags": [],
+    "type": "Integer"
+  }
+}

@@ -1,0 +1,29 @@
+﻿{
+  "map": {
+    "_StormgateObjectiveSubmerged0": {
+      "based_on": "StormgateObjectiveSubmerged",
+      "id": "_StormgateObjectiveSubmerged0",
+      "placed_name": "StormgateSubmerged1"
+    },
+    "_StormgateObjectiveSubmerged1": {
+      "based_on": "StormgateObjectiveSubmerged",
+      "id": "_StormgateObjectiveSubmerged1",
+      "placed_name": "StormgateSubmerged2"
+    },
+    "_StormgateObjectiveSubmerged2": {
+      "based_on": "StormgateObjectiveSubmerged",
+      "id": "_StormgateObjectiveSubmerged2",
+      "placed_name": "StormgateSubmerged3"
+    },
+    "_StormgateObjectiveSubmerged3": {
+      "based_on": "StormgateObjectiveSubmerged",
+      "id": "_StormgateObjectiveSubmerged3",
+      "placed_name": "StormgateSubmerged4"
+    },
+    "_StormgateObjectiveSubmerged4": {
+      "based_on": "StormgateObjectiveSubmerged",
+      "id": "_StormgateObjectiveSubmerged4",
+      "placed_name": "StormgateSubmerged5"
+    }
+  }
+}
