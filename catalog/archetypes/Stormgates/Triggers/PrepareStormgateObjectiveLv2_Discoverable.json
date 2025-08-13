@@ -1,4 +1,4 @@
-{
+﻿{
   "data": {
     "actions": [
       {
@@ -323,17 +323,16 @@
                             {
                               "expressions": [
                                 {
-                                  "type": "Function",
                                   "function": {
                                     "function_id": "Math_Arithmetic_Integer",
                                     "parameters": [
                                       {
                                         "expressions": [
                                           {
+                                            "type": "Variable",
                                             "variable": {
                                               "variable_id": "NumStormgatesFound"
-                                            },
-                                            "type": "Variable"
+                                            }
                                           }
                                         ],
                                         "id": "value1"
@@ -370,7 +369,8 @@
                                         "id": "value2"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "type": "Function"
                                 }
                               ],
                               "id": "max"

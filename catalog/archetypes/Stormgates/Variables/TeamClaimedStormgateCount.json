@@ -1,8 +1,8 @@
-{
-  "id": "TeamClaimedStormgateCount",
+﻿{
   "__base_type": "GlobalVariable",
   "array_size": 8,
   "based_on": "GlobalVariable",
+  "id": "TeamClaimedStormgateCount",
   "initial_values": [
     {
       "type": "Value",
@@ -20,10 +20,10 @@
   "name": "",
   "per_element_initial_values": false,
   "type": {
-    "param_id": "",
     "directive": "FunctionType",
     "implements": "",
     "inner_type": "",
+    "param_id": "",
     "sub_directive": "None",
     "tags": [],
     "type": "Integer"

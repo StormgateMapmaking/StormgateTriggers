@@ -1,4 +1,4 @@
-{
+﻿{
   "data": {
     "actions": [
       {
@@ -2422,8 +2422,8 @@
         }
       },
       {
-        "id": "CurrentStormgateRewardsGroup",
         "array_size": 3,
+        "id": "CurrentStormgateRewardsGroup",
         "initial_values": [
           {
             "preset": {

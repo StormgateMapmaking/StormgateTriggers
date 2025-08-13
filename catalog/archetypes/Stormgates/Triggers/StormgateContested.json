@@ -1,4 +1,4 @@
-{
+﻿{
   "data": {
     "actions": [
       {
@@ -57,7 +57,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -69,7 +68,8 @@
                                 "value": "0"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -161,7 +161,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -173,7 +172,8 @@
                                 "value": "0"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -260,7 +260,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -272,7 +271,8 @@
                                 "value": "1"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -364,7 +364,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -376,7 +375,8 @@
                                 "value": "1"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -463,7 +463,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -475,7 +474,8 @@
                                 "value": "2"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -567,7 +567,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -579,7 +578,8 @@
                                 "value": "2"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -666,7 +666,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -678,7 +677,8 @@
                                 "value": "3"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -770,7 +770,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -782,7 +781,8 @@
                                 "value": "3"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -869,7 +869,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -881,7 +880,8 @@
                                 "value": "4"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -973,7 +973,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -985,7 +984,8 @@
                                 "value": "4"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1072,7 +1072,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -1084,7 +1083,8 @@
                                 "value": "5"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1176,7 +1176,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -1188,7 +1187,8 @@
                                 "value": "5"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1275,7 +1275,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -1287,7 +1286,8 @@
                                 "value": "6"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1379,7 +1379,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -1391,7 +1390,8 @@
                                 "value": "6"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1478,7 +1478,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -1490,7 +1489,8 @@
                                 "value": "7"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1582,7 +1582,6 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "TeamHasContestedStormgate",
                           "indices": [
                             {
                               "type": "Value",
@@ -1594,7 +1593,8 @@
                                 "value": "7"
                               }
                             }
-                          ]
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
                         }
                       }
                     ],
@@ -1792,40 +1792,40 @@
     "id": "StormgateContested",
     "variables": [
       {
-        "id": "triggering_damage_source_team",
         "array_size": 0,
+        "id": "triggering_damage_source_team",
         "initial_values": [
           {
-            "type": "Function",
             "function": {
               "function_id": "Player_GetTeam",
               "parameters": [
                 {
-                  "id": "player",
                   "expressions": [
                     {
-                      "type": "Function",
                       "function": {
                         "function_id": "Unit_GetOwningPlayer",
                         "parameters": [
                           {
-                            "id": "unit",
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Damage_GetTriggeringDamageSourceUnit"
-                                }
+                                },
+                                "type": "Function"
                               }
-                            ]
+                            ],
+                            "id": "unit"
                           }
                         ]
-                      }
+                      },
+                      "type": "Function"
                     }
-                  ]
+                  ],
+                  "id": "player"
                 }
               ]
-            }
+            },
+            "type": "Function"
           }
         ],
         "is_array": false,
@@ -1844,8 +1844,8 @@
         }
       },
       {
-        "id": "TeamHasContestedStormgate",
         "array_size": 8,
+        "id": "TeamHasContestedStormgate",
         "initial_values": [
           {
             "type": "Value",
