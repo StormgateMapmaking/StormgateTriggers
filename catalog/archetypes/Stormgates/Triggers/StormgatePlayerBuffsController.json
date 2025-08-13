@@ -1,12 +1,10 @@
-{
+﻿{
   "data": {
-    "id": "StormgatePlayerBuffsController",
     "actions": [
       {
         "function_id": "PlayerGroup_ForEachPlayerInGroup",
         "parameters": [
           {
-            "id": "players",
             "expressions": [
               {
                 "function": {
@@ -16,18 +14,17 @@
                 },
                 "type": "Function"
               }
-            ]
+            ],
+            "id": "players"
           }
         ],
         "sub_functions": [
           {
-            "id": "actions",
             "functions": [
               {
                 "function_id": "Player_RemovePlayerBuff",
                 "parameters": [
                   {
-                    "id": "buff",
                     "expressions": [
                       {
                         "type": "Value",
@@ -40,10 +37,10 @@
                           "value": "StormgateDamageModifier1_PlayerBuff"
                         }
                       }
-                    ]
+                    ],
+                    "id": "buff"
                   },
                   {
-                    "id": "player",
                     "expressions": [
                       {
                         "function": {
@@ -53,10 +50,10 @@
                         },
                         "type": "Function"
                       }
-                    ]
+                    ],
+                    "id": "player"
                   },
                   {
-                    "id": "stacks",
                     "expressions": [
                       {
                         "type": "Value",
@@ -68,7 +65,8 @@
                           "value": "1"
                         }
                       }
-                    ]
+                    ],
+                    "id": "stacks"
                   }
                 ],
                 "sub_functions": []
@@ -77,7 +75,6 @@
                 "function_id": "Player_RemovePlayerBuff",
                 "parameters": [
                   {
-                    "id": "buff",
                     "expressions": [
                       {
                         "type": "Value",
@@ -89,10 +86,10 @@
                           "value": "StormgateDamageModifier2_PlayerBuff"
                         }
                       }
-                    ]
+                    ],
+                    "id": "buff"
                   },
                   {
-                    "id": "player",
                     "expressions": [
                       {
                         "function": {
@@ -102,10 +99,10 @@
                         },
                         "type": "Function"
                       }
-                    ]
+                    ],
+                    "id": "player"
                   },
                   {
-                    "id": "stacks",
                     "expressions": [
                       {
                         "type": "Value",
@@ -117,7 +114,8 @@
                           "value": "1"
                         }
                       }
-                    ]
+                    ],
+                    "id": "stacks"
                   }
                 ],
                 "sub_functions": []
@@ -126,7 +124,6 @@
                 "function_id": "Player_RemovePlayerBuff",
                 "parameters": [
                   {
-                    "id": "buff",
                     "expressions": [
                       {
                         "type": "Value",
@@ -138,10 +135,10 @@
                           "value": "StormgateDamageModifier3_PlayerBuff"
                         }
                       }
-                    ]
+                    ],
+                    "id": "buff"
                   },
                   {
-                    "id": "player",
                     "expressions": [
                       {
                         "function": {
@@ -151,10 +148,10 @@
                         },
                         "type": "Function"
                       }
-                    ]
+                    ],
+                    "id": "player"
                   },
                   {
-                    "id": "stacks",
                     "expressions": [
                       {
                         "type": "Value",
@@ -166,7 +163,8 @@
                           "value": "1"
                         }
                       }
-                    ]
+                    ],
+                    "id": "stacks"
                   }
                 ],
                 "sub_functions": []
@@ -175,7 +173,6 @@
                 "function_id": "Player_RemovePlayerBuff",
                 "parameters": [
                   {
-                    "id": "buff",
                     "expressions": [
                       {
                         "type": "Value",
@@ -187,10 +184,10 @@
                           "value": "StormgateDamageModifier4_PlayerBuff"
                         }
                       }
-                    ]
+                    ],
+                    "id": "buff"
                   },
                   {
-                    "id": "player",
                     "expressions": [
                       {
                         "function": {
@@ -200,10 +197,10 @@
                         },
                         "type": "Function"
                       }
-                    ]
+                    ],
+                    "id": "player"
                   },
                   {
-                    "id": "stacks",
                     "expressions": [
                       {
                         "type": "Value",
@@ -215,7 +212,8 @@
                           "value": "1"
                         }
                       }
-                    ]
+                    ],
+                    "id": "stacks"
                   }
                 ],
                 "sub_functions": []
@@ -224,7 +222,6 @@
                 "function_id": "Player_RemovePlayerBuff",
                 "parameters": [
                   {
-                    "id": "buff",
                     "expressions": [
                       {
                         "type": "Value",
@@ -236,10 +233,10 @@
                           "value": "StormgateDamageModifier5_PlayerBuff"
                         }
                       }
-                    ]
+                    ],
+                    "id": "buff"
                   },
                   {
-                    "id": "player",
                     "expressions": [
                       {
                         "function": {
@@ -249,10 +246,10 @@
                         },
                         "type": "Function"
                       }
-                    ]
+                    ],
+                    "id": "player"
                   },
                   {
-                    "id": "stacks",
                     "expressions": [
                       {
                         "type": "Value",
@@ -264,7 +261,8 @@
                           "value": "1"
                         }
                       }
-                    ]
+                    ],
+                    "id": "stacks"
                   }
                 ],
                 "sub_functions": []
@@ -273,38 +271,36 @@
                 "function_id": "Variable_SetVariable",
                 "parameters": [
                   {
-                    "id": "variable",
                     "expressions": [
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "team_buff_value",
-                          "indices": []
+                          "indices": [],
+                          "variable_id": "team_buff_value"
                         }
                       }
-                    ]
+                    ],
+                    "id": "variable"
                   },
                   {
-                    "id": "value",
                     "expressions": [
                       {
                         "function": {
                           "function_id": "Math_Arithmetic_Integer",
                           "parameters": [
                             {
-                              "id": "value1",
                               "expressions": [
                                 {
                                   "type": "Variable",
                                   "variable": {
-                                    "variable_id": "MaxClaimedStormgateCount",
-                                    "indices": []
+                                    "indices": [],
+                                    "variable_id": "MaxClaimedStormgateCount"
                                   }
                                 }
-                              ]
+                              ],
+                              "id": "value1"
                             },
                             {
-                              "id": "op",
                               "expressions": [
                                 {
                                   "preset": {
@@ -313,23 +309,20 @@
                                   },
                                   "type": "Preset"
                                 }
-                              ]
+                              ],
+                              "id": "op"
                             },
                             {
-                              "id": "value2",
                               "expressions": [
                                 {
                                   "type": "Variable",
                                   "variable": {
-                                    "variable_id": "TeamClaimedStormgateCount",
                                     "indices": [
                                       {
-                                        "type": "Function",
                                         "function": {
                                           "function_id": "Player_GetTeam",
                                           "parameters": [
                                             {
-                                              "id": "player",
                                               "expressions": [
                                                 {
                                                   "function": {
@@ -337,22 +330,27 @@
                                                   },
                                                   "type": "Function"
                                                 }
-                                              ]
+                                              ],
+                                              "id": "player"
                                             }
                                           ]
-                                        }
+                                        },
+                                        "type": "Function"
                                       }
-                                    ]
+                                    ],
+                                    "variable_id": "TeamClaimedStormgateCount"
                                   }
                                 }
-                              ]
+                              ],
+                              "id": "value2"
                             }
                           ],
                           "sub_functions": []
                         },
                         "type": "Function"
                       }
-                    ]
+                    ],
+                    "id": "value"
                   }
                 ],
                 "sub_functions": []
@@ -361,7 +359,6 @@
                 "function_id": "General_Switch",
                 "parameters": [
                   {
-                    "id": "value",
                     "expressions": [
                       {
                         "type": "Variable",
@@ -369,18 +366,17 @@
                           "variable_id": "team_buff_value"
                         }
                       }
-                    ]
+                    ],
+                    "id": "value"
                   }
                 ],
                 "sub_functions": [
                   {
-                    "id": "cases",
                     "functions": [
                       {
                         "function_id": "General_SwitchCase",
                         "parameters": [
                           {
-                            "id": "value",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -392,18 +388,17 @@
                                   "value": "1"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value"
                           }
                         ],
                         "sub_functions": [
                           {
-                            "id": "actions",
                             "functions": [
                               {
                                 "function_id": "Player_ApplyPlayerBuff",
                                 "parameters": [
                                   {
-                                    "id": "buff",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -415,10 +410,10 @@
                                           "value": "StormgateDamageModifier1_PlayerBuff"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "buff"
                                   },
                                   {
-                                    "id": "player",
                                     "expressions": [
                                       {
                                         "function": {
@@ -426,10 +421,10 @@
                                         },
                                         "type": "Function"
                                       }
-                                    ]
+                                    ],
+                                    "id": "player"
                                   },
                                   {
-                                    "id": "stacks",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -441,12 +436,14 @@
                                           "value": "1"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "stacks"
                                   }
                                 ],
                                 "sub_functions": []
                               }
-                            ]
+                            ],
+                            "id": "actions"
                           }
                         ]
                       },
@@ -454,7 +451,6 @@
                         "function_id": "General_SwitchCase",
                         "parameters": [
                           {
-                            "id": "value",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -466,18 +462,17 @@
                                   "value": "2"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value"
                           }
                         ],
                         "sub_functions": [
                           {
-                            "id": "actions",
                             "functions": [
                               {
                                 "function_id": "Player_ApplyPlayerBuff",
                                 "parameters": [
                                   {
-                                    "id": "buff",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -489,10 +484,10 @@
                                           "value": "StormgateDamageModifier2_PlayerBuff"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "buff"
                                   },
                                   {
-                                    "id": "player",
                                     "expressions": [
                                       {
                                         "function": {
@@ -500,10 +495,10 @@
                                         },
                                         "type": "Function"
                                       }
-                                    ]
+                                    ],
+                                    "id": "player"
                                   },
                                   {
-                                    "id": "stacks",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -515,12 +510,14 @@
                                           "value": "1"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "stacks"
                                   }
                                 ],
                                 "sub_functions": []
                               }
-                            ]
+                            ],
+                            "id": "actions"
                           }
                         ]
                       },
@@ -528,7 +525,6 @@
                         "function_id": "General_SwitchCase",
                         "parameters": [
                           {
-                            "id": "value",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -540,18 +536,17 @@
                                   "value": "3"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value"
                           }
                         ],
                         "sub_functions": [
                           {
-                            "id": "actions",
                             "functions": [
                               {
                                 "function_id": "Player_ApplyPlayerBuff",
                                 "parameters": [
                                   {
-                                    "id": "buff",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -563,10 +558,10 @@
                                           "value": "StormgateDamageModifier3_PlayerBuff"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "buff"
                                   },
                                   {
-                                    "id": "player",
                                     "expressions": [
                                       {
                                         "function": {
@@ -574,10 +569,10 @@
                                         },
                                         "type": "Function"
                                       }
-                                    ]
+                                    ],
+                                    "id": "player"
                                   },
                                   {
-                                    "id": "stacks",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -589,12 +584,14 @@
                                           "value": "1"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "stacks"
                                   }
                                 ],
                                 "sub_functions": []
                               }
-                            ]
+                            ],
+                            "id": "actions"
                           }
                         ]
                       },
@@ -602,7 +599,6 @@
                         "function_id": "General_SwitchCase",
                         "parameters": [
                           {
-                            "id": "value",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -614,18 +610,17 @@
                                   "value": "4"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value"
                           }
                         ],
                         "sub_functions": [
                           {
-                            "id": "actions",
                             "functions": [
                               {
                                 "function_id": "Player_ApplyPlayerBuff",
                                 "parameters": [
                                   {
-                                    "id": "buff",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -637,10 +632,10 @@
                                           "value": "StormgateDamageModifier4_PlayerBuff"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "buff"
                                   },
                                   {
-                                    "id": "player",
                                     "expressions": [
                                       {
                                         "function": {
@@ -648,10 +643,10 @@
                                         },
                                         "type": "Function"
                                       }
-                                    ]
+                                    ],
+                                    "id": "player"
                                   },
                                   {
-                                    "id": "stacks",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -663,12 +658,14 @@
                                           "value": "1"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "stacks"
                                   }
                                 ],
                                 "sub_functions": []
                               }
-                            ]
+                            ],
+                            "id": "actions"
                           }
                         ]
                       },
@@ -676,7 +673,6 @@
                         "function_id": "General_SwitchCase",
                         "parameters": [
                           {
-                            "id": "value",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -688,18 +684,17 @@
                                   "value": "5"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value"
                           }
                         ],
                         "sub_functions": [
                           {
-                            "id": "actions",
                             "functions": [
                               {
                                 "function_id": "Player_ApplyPlayerBuff",
                                 "parameters": [
                                   {
-                                    "id": "buff",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -711,10 +706,10 @@
                                           "value": "StormgateDamageModifier5_PlayerBuff"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "buff"
                                   },
                                   {
-                                    "id": "player",
                                     "expressions": [
                                       {
                                         "function": {
@@ -722,10 +717,10 @@
                                         },
                                         "type": "Function"
                                       }
-                                    ]
+                                    ],
+                                    "id": "player"
                                   },
                                   {
-                                    "id": "stacks",
                                     "expressions": [
                                       {
                                         "type": "Value",
@@ -737,20 +732,23 @@
                                           "value": "1"
                                         }
                                       }
-                                    ]
+                                    ],
+                                    "id": "stacks"
                                   }
                                 ],
                                 "sub_functions": []
                               }
-                            ]
+                            ],
+                            "id": "actions"
                           }
                         ]
                       }
-                    ]
+                    ],
+                    "id": "cases"
                   },
                   {
-                    "id": "default",
-                    "functions": []
+                    "functions": [],
+                    "id": "default"
                   }
                 ]
               },
@@ -759,13 +757,11 @@
                 "parameters": [],
                 "sub_functions": [
                   {
-                    "id": "if",
                     "functions": [
                       {
                         "function_id": "Logic_Comparison",
                         "parameters": [
                           {
-                            "id": "value1",
                             "expressions": [
                               {
                                 "type": "Variable",
@@ -773,10 +769,10 @@
                                   "variable_id": "team_buff_value"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value1"
                           },
                           {
-                            "id": "op",
                             "expressions": [
                               {
                                 "preset": {
@@ -785,10 +781,10 @@
                                 },
                                 "type": "Preset"
                               }
-                            ]
+                            ],
+                            "id": "op"
                           },
                           {
-                            "id": "value2",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -800,21 +796,21 @@
                                   "value": "5"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "value2"
                           }
                         ],
                         "sub_functions": []
                       }
-                    ]
+                    ],
+                    "id": "if"
                   },
                   {
-                    "id": "then",
                     "functions": [
                       {
                         "function_id": "Player_ApplyPlayerBuff",
                         "parameters": [
                           {
-                            "id": "buff",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -826,10 +822,10 @@
                                   "value": "StormgateDamageModifier5_PlayerBuff"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "buff"
                           },
                           {
-                            "id": "player",
                             "expressions": [
                               {
                                 "function": {
@@ -837,10 +833,10 @@
                                 },
                                 "type": "Function"
                               }
-                            ]
+                            ],
+                            "id": "player"
                           },
                           {
-                            "id": "stacks",
                             "expressions": [
                               {
                                 "type": "Value",
@@ -852,20 +848,23 @@
                                   "value": "1"
                                 }
                               }
-                            ]
+                            ],
+                            "id": "stacks"
                           }
                         ],
                         "sub_functions": []
                       }
-                    ]
+                    ],
+                    "id": "then"
                   },
                   {
-                    "id": "else",
-                    "functions": []
+                    "functions": [],
+                    "id": "else"
                   }
                 ]
               }
-            ]
+            ],
+            "id": "actions"
           }
         ]
       }
@@ -875,10 +874,11 @@
     "dev_only": false,
     "enabled": true,
     "events": [],
+    "id": "StormgatePlayerBuffsController",
     "variables": [
       {
-        "id": "team_buff_value",
         "array_size": 0,
+        "id": "team_buff_value",
         "initial_values": [
           {
             "type": "Value",
@@ -897,10 +897,10 @@
         "name": "team_buff_value",
         "per_element_initial_values": false,
         "type": {
-          "param_id": "",
           "directive": "FunctionType",
           "implements": "",
           "inner_type": "",
+          "param_id": "",
           "sub_directive": "None",
           "tags": [],
           "type": "Integer"

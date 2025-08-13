@@ -1,4 +1,4 @@
-{
+﻿{
   "data": {
     "actions": [
       {
@@ -18,7 +18,6 @@
         ],
         "sub_functions": [
           {
-            "id": "actions",
             "functions": [
               {
                 "function_id": "Revealer_DestroyRevealer",
@@ -109,7 +108,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "id": "actions"
           }
         ]
       }

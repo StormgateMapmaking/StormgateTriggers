@@ -1,4 +1,4 @@
-{
+﻿{
   "data": {
     "actions": [
       {
@@ -301,7 +301,7 @@
                   },
                   {
                     "expressions": [
-                                            {
+                      {
                         "function_id": "Sound_PlaySoundForPlayers",
                         "parameters": [
                           {
@@ -370,10 +370,10 @@
                         "variable": {
                           "indices": [
                             {
-                              "type": "Function",
                               "function": {
                                 "function_id": "Team_GetTriggeringTeam"
-                              }
+                              },
+                              "type": "Function"
                             }
                           ],
                           "variable_id": "TeamClaimedStormgateCount"
@@ -433,10 +433,10 @@
                         "variable": {
                           "indices": [
                             {
-                              "type": "Function",
                               "function": {
                                 "function_id": "Team_GetTriggeringTeam"
-                              }
+                              },
+                              "type": "Function"
                             }
                           ],
                           "variable_id": "TeamClaimedStormgateCount"
@@ -1127,10 +1127,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -1182,10 +1182,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -1237,10 +1237,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -1292,10 +1292,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -1913,10 +1913,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -1968,10 +1968,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -2023,10 +2023,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -2078,10 +2078,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -2699,10 +2699,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -2754,10 +2754,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -2809,10 +2809,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -2864,10 +2864,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -3485,10 +3485,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -3540,10 +3540,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -3595,10 +3595,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -3650,10 +3650,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -4275,10 +4275,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -4330,10 +4330,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -4385,10 +4385,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -4440,10 +4440,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Function",
                                 "function": {
                                   "function_id": "Player_GetTriggeringPlayer"
-                                }
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "new_owner"
@@ -4682,8 +4682,8 @@
     "id": "StormgateObjectiveCaptured_Discoverable",
     "variables": [
       {
-        "id": "team_index",
         "array_size": 0,
+        "id": "team_index",
         "initial_values": [
           {
             "type": "Value",

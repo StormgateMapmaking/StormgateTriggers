@@ -8,13 +8,13 @@
       163840
     ]
   },
-  "24801836-A3C9-4FDB-9397-BE1E9A17BDF4": {
+  "20D0970A-4C14-97F5-1399-6EB226ACA7FF": {
     "facing": 0,
     "kind": "_StormgateObjective_TugOfWar4",
     "player": 31,
     "position": [
-      0,
-      -262144
+      -262144,
+      0
     ]
   },
   "2723DE56-445A-7619-C924-F1AD9D57A545": {
@@ -35,6 +35,24 @@
       786432
     ]
   },
+  "4F2C1527-4645-255A-2756-58863172F44B": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar1",
+    "player": 31,
+    "position": [
+      0,
+      262144
+    ]
+  },
+  "64C93ED3-40EA-AF52-8A1B-F3BC033BEFE3": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar3",
+    "player": 31,
+    "position": [
+      0,
+      -229376
+    ]
+  },
   "65CAF4B0-4E4D-4451-CF31-6B8646DC7001": {
     "facing": 0,
     "kind": "MegaResourceA",
@@ -53,6 +71,15 @@
       -786432
     ]
   },
+  "7D4A7BBD-4F3C-21A2-ECD1-80B21A51AA4E": {
+    "facing": 0,
+    "kind": "_StormgateObjective_TugOfWar2",
+    "player": 31,
+    "position": [
+      262144,
+      0
+    ]
+  },
   "83D5B5C9-4CB3-2A30-C60A-75A5A6DAD320": {
     "facing": 0,
     "kind": "_StormgateObjectiveSubmerged1",
@@ -67,8 +94,8 @@
     "kind": "_StormgateObjectiveSubmerged4",
     "player": 31,
     "position": [
-      0,
-      -262144
+      -262144,
+      0
     ]
   },
   "8A08C733-4A52-2C72-0EC9-AA907F5BB0EE": {
@@ -77,15 +104,6 @@
     "player": 0,
     "position": [
       950272,
-      0
-    ]
-  },
-  "9201E0AF-4294-C008-3298-C28311A27CB6": {
-    "facing": 0,
-    "kind": "_StormgateObjective_TugOfWar3",
-    "player": 31,
-    "position": [
-      -262144,
       0
     ]
   },
@@ -105,15 +123,6 @@
     "position": [
       -786432,
       -163840
-    ]
-  },
-  "BD119738-486C-0C84-293C-598F8EEEB05F": {
-    "facing": 0,
-    "kind": "_StormgateObjective_TugOfWar0",
-    "player": 31,
-    "position": [
-      0,
-      0
     ]
   },
   "BF63395A-438C-9CBA-5410-0B825565AC8E": {
@@ -157,8 +166,8 @@
     "kind": "_StormgateObjectiveSubmerged3",
     "player": 31,
     "position": [
-      -262144,
-      0
+      0,
+      -229376
     ]
   },
   "DFC8F3A5-4EDB-F774-717B-0C834F401486": {
@@ -167,15 +176,6 @@
     "player": 1,
     "position": [
       -786432,
-      0
-    ]
-  },
-  "E497E41D-443A-DE94-6D5E-D0A9F6E54018": {
-    "facing": 0,
-    "kind": "_StormgateObjective_TugOfWar2",
-    "player": 31,
-    "position": [
-      262144,
       0
     ]
   },
@@ -188,13 +188,13 @@
       -786432
     ]
   },
-  "F8ABBCF0-CBAF-4EF0-91F8-6056E7E33DBC": {
+  "FA01B19E-4B73-530C-C79F-FA93A3045E95": {
     "facing": 0,
-    "kind": "_StormgateObjective_TugOfWar1",
+    "kind": "_StormgateObjective_TugOfWar0",
     "player": 31,
     "position": [
       0,
-      262144
+      0
     ]
   },
   "version": 1

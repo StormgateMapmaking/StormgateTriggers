@@ -1,4 +1,4 @@
-{
+﻿{
   "data": {
     "actions": [
       {
@@ -4598,8 +4598,8 @@
         }
       },
       {
-        "id": "valid_reward_map",
         "array_size": 6,
+        "id": "valid_reward_map",
         "initial_values": [
           {
             "type": "Value",
@@ -4755,8 +4755,8 @@
         }
       },
       {
-        "id": "final_reward_map",
         "array_size": 3,
+        "id": "final_reward_map",
         "initial_values": [
           {
             "type": "Value",
