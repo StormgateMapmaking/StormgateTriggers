@@ -242,50 +242,6 @@
                         ]
                       },
                       {
-                        "function_id": "Sound_PlaySoundForPlayers",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "type": "Value",
-                                "value": {
-                                  "type": {
-                                    "directive": "TypeRef",
-                                    "type": "SoundData"
-                                  },
-                                  "value": "SoundData_Announcer_Stormgates_OnStormgateLost"
-                                }
-                              }
-                            ],
-                            "id": "sound"
-                          },
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "PlayerGroup_GetTeamPlayers",
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "type": "Variable",
-                                          "variable": {
-                                            "variable_id": "team_index"
-                                          }
-                                        }
-                                      ],
-                                      "id": "team"
-                                    }
-                                  ]
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "players"
-                          }
-                        ]
-                      },
-                      {
                         "function_id": "Debug_DebugMessage",
                         "parameters": [
                           {
@@ -344,6 +300,52 @@
                     "id": "then"
                   },
                   {
+                    "expressions": [
+                                            {
+                        "function_id": "Sound_PlaySoundForPlayers",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "SoundData"
+                                  },
+                                  "value": "SoundData_Announcer_Stormgates_OnStormgateLost"
+                                }
+                              }
+                            ],
+                            "id": "sound"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetTeamPlayers",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "team_index"
+                                          }
+                                        }
+                                      ],
+                                      "id": "team"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "players"
+                          }
+                        ]
+                      }
+                    ],
                     "id": "else"
                   }
                 ]
