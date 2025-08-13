@@ -17,27 +17,24 @@ Previously it was just a comparison between team 1 and team 2, but now I keep tr
 To use less than 5 stormgates it may be fine to simply not include the objects in preplaced_named_objects.
 However, I have typically removed all references, i.e.:
 - Deleting StormgateCP# and StormgateSubmerged# in preplaced_named_objects.json
-- Deleting any references to the StormgateSubmerged# in managed_archetypes.json (likely optional)
-- Deleting any catalog/archetypes/Stormgates/CapturePoints/StormgateCP#.json files that are unused (likely optional)
+- Deleting any references to the StormgateCP# and StormgateSubmerged# in managed_archetypes.json (likely optional)
 
 #### Steps
 - Assign placed names of StormgateCP# (where # is an integer 1-5) to tug of war objects
-  - Tug Of War IDs are typically labelled 0-4 but CP placed names must be 1-5.
-  - This is handled inside CapturePoints/StormgateCP#.json
+  - Tug Of War IDs are typically labelled 0-4 but StormgateCP# placed names must be 1-5.
+  - This is handled inside managed_archetypes.json
 - Assign placed names of StormgateSubmerged# (where # is an integer 1-5) to stormgate objects
-  - IDs are typically labelled 0-4 but placed names must be 1-5.
+  - Stormgate IDs are typically labelled 0-4 but StormgateSubmerged# placed names must be 1-5.
   - This is handled inside managed_archetypes.json
     - An example managed_archetypes.json with nothing but 5 stormgates has been included.
-
 - Place up to 5 instances of StormgateSubmerged# and StormgateCP# on the map
   - This is in preplaced_named_objects.json and they should be owned by Player 31 (Neutral Hostile).
   - Ensure the position arrays (x, y) match for pairs of capture points and stormgate submerged structures.
   - An example preplaced_named_objects.json with 5 pairs of objects placed has been included. Feel free to move these around the map and/or change GUIDs.
-
 - Copy this folder of Stormgates/ into catalog/archetypes/ so that we have catalog/archetypes/Stormgates/
 - Ensure the "Init_StormgateObjectives" trigger is run as a "Trigger_Run" call in catalog/archetypes/MeleeInitialization.json
-  - The time of day should also be edited so that night time triggers at the same time as the first stormgate spawn at ~194.0seconds.
-  - I've provided an example of this as well
+- Ensure the correct time of day is specified in catalog/archetypes/InstanceMapSettings.json
+  - The time of day should also be edited so that night time triggers at the same time as the first stormgate spawn at ~194.0seconds and then is in sync with subsequent stormgates from then on.
 
 #### Tips
 
