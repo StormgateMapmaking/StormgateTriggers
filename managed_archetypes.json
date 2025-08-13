@@ -24,6 +24,31 @@
       "based_on": "StormgateObjectiveSubmerged",
       "id": "_StormgateObjectiveSubmerged4",
       "placed_name": "StormgateSubmerged5"
+    },
+    "_StormgateObjective_TugOfWar0": {
+      "based_on": "StormgateObjective_TugOfWar",
+      "id": "_StormgateObjective_TugOfWar0",
+      "placed_name": "StormgateCP1"
+    },
+    "_StormgateObjective_TugOfWar1": {
+      "based_on": "StormgateObjective_TugOfWar",
+      "id": "_StormgateObjective_TugOfWar1",
+      "placed_name": "StormgateCP2"
+    },
+    "_StormgateObjective_TugOfWar2": {
+      "based_on": "StormgateObjective_TugOfWar",
+      "id": "_StormgateObjective_TugOfWar2",
+      "placed_name": "StormgateCP3"
+    },
+    "_StormgateObjective_TugOfWar3": {
+      "based_on": "StormgateObjective_TugOfWar",
+      "id": "_StormgateObjective_TugOfWar3",
+      "placed_name": "StormgateCP4"
+    },
+    "_StormgateObjective_TugOfWar4": {
+      "based_on": "StormgateObjective_TugOfWar",
+      "id": "_StormgateObjective_TugOfWar4",
+      "placed_name": "StormgateCP5"
     }
   }
 }
