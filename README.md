@@ -49,7 +49,7 @@ If you want to debug a little easier, here are a few things you can do:
 
 - I make no guarantees that any of this works, especially not when patches are prone to introduce breaking changes.
 - Regarding bugs: its best to look out for things like:
-  - Are all the announces playing?
+  - Are all the announcers playing correctly?
   - Does every player have a revealer of each stormgate?
   - Is the vision radius of the revealer for each player scaling relative to the winning team?
   - Is the damage buff modifier for each player scaling relative to the winning team?
