@@ -108,10 +108,10 @@
                           {
                             "expressions": [
                               {
-                                "function": {
-                                  "function_id": "Team_GetTriggeringTeam"
-                                },
-                                "type": "Function"
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "team_index"
+                                }
                               }
                             ],
                             "id": "value1"
@@ -131,10 +131,10 @@
                           {
                             "expressions": [
                               {
-                                "type": "Variable",
-                                "variable": {
-                                  "variable_id": "team_index"
-                                }
+                                "function": {
+                                  "function_id": "Team_GetTriggeringTeam"
+                                },
+                                "type": "Function"
                               }
                             ],
                             "id": "value2"
@@ -300,7 +300,7 @@
                     "id": "then"
                   },
                   {
-                    "expressions": [
+                    "functions": [
                       {
                         "function_id": "Sound_PlaySoundForPlayers",
                         "parameters": [
