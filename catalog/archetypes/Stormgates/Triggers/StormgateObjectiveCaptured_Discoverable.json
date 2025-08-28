@@ -198,6 +198,104 @@
                         ]
                       },
                       {
+                        "function_id": "Variable_SetVariable",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "ally_player_group"
+                                }
+                              }
+                            ],
+                            "id": "variable"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetTeamPlayers",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "team_index"
+                                          }
+                                        }
+                                      ],
+                                      "id": "team"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "PlayerGroup_RemovePlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "ally_player_group"
+                                }
+                              }
+                            ],
+                            "id": "group"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Player_GetTriggeringPlayer"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "player"
+                          }
+                        ]
+                      },
+                      {
+                        "function_id": "Sound_PlaySoundForPlayers",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "SoundData"
+                                  },
+                                  "value": "SoundData_Announcer_Stormgates_OnStormgateAllyWon"
+                                }
+                              }
+                            ],
+                            "id": "sound"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "ally_player_group"
+                                }
+                              }
+                            ],
+                            "id": "players"
+                          }
+                        ]
+                      },
+                      {
                         "function_id": "Sound_PlaySoundForPlayers",
                         "parameters": [
                           {
@@ -219,20 +317,7 @@
                             "expressions": [
                               {
                                 "function": {
-                                  "function_id": "PlayerGroup_GetTeamPlayers",
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "type": "Variable",
-                                          "variable": {
-                                            "variable_id": "team_index"
-                                          }
-                                        }
-                                      ],
-                                      "id": "team"
-                                    }
-                                  ]
+                                  "function_id": "PlayerGroup_GetPlayerAsPlayerGroup"
                                 },
                                 "type": "Function"
                               }
@@ -4711,6 +4796,32 @@
           "param_id": "",
           "sub_directive": "None",
           "type": "Integer"
+        }
+      },
+      {
+        "array_size": 0,
+        "id": "ally_player_group",
+        "initial_values": [
+          {
+            "function": {
+              "function_id": "PlayerGroup_GetNewPlayerGroup"
+            },
+            "type": "Function"
+          }
+        ],
+        "is_array": false,
+        "is_constant": false,
+        "is_id_based_on_name": true,
+        "name": "ally_player_group",
+        "per_element_initial_values": false,
+        "type": {
+          "directive": "FunctionType",
+          "implements": "",
+          "inner_type": "",
+          "param_id": "",
+          "sub_directive": "None",
+          "tags": [],
+          "type": "PlayerGroup"
         }
       }
     ]
