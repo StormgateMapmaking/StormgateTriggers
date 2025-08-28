@@ -951,18 +951,26 @@
         ]
       },
       {
-        "function_id": "Variable_SetVariable",
+        "function_id": "General_PickEachInteger",
         "parameters": [
           {
             "expressions": [
               {
-                "type": "Variable",
-                "variable": {
-                  "variable_id": "Team1StormgateContested"
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "implements": "",
+                    "inner_type": "",
+                    "param_id": "",
+                    "sub_directive": "None",
+                    "type": "Integer"
+                  },
+                  "value": "0"
                 }
               }
             ],
-            "id": "variable"
+            "id": "start"
           },
           {
             "expressions": [
@@ -975,48 +983,63 @@
                     "inner_type": "",
                     "param_id": "",
                     "sub_directive": "None",
-                    "type": "Boolean"
+                    "type": "Integer"
                   },
-                  "value": "false"
+                  "value": "7"
                 }
               }
             ],
-            "id": "value"
+            "id": "end"
           }
-        ]
-      },
-      {
-        "function_id": "Variable_SetVariable",
-        "parameters": [
+        ],
+        "sub_functions": [
           {
-            "expressions": [
+            "functions": [
               {
-                "type": "Variable",
-                "variable": {
-                  "variable_id": "Team2StormgateContested"
-                }
-              }
-            ],
-            "id": "variable"
-          },
-          {
-            "expressions": [
-              {
-                "type": "Value",
-                "value": {
-                  "type": {
-                    "directive": "FunctionType",
-                    "implements": "",
-                    "inner_type": "",
-                    "param_id": "",
-                    "sub_directive": "None",
-                    "type": "Boolean"
+                "function_id": "Variable_SetVariable",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "indices": [
+                            {
+                              "function": {
+                                "function_id": "General_GetPickedInteger"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "variable_id": "TeamHasContestedStormgate"
+                        }
+                      }
+                    ],
+                    "id": "variable"
                   },
-                  "value": "false"
-                }
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "implements": "",
+                            "inner_type": "",
+                            "param_id": "",
+                            "sub_directive": "None",
+                            "type": "Boolean"
+                          },
+                          "value": "false"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
               }
             ],
-            "id": "value"
+            "id": "actions"
           }
         ]
       }
